@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="is.blikar.blikinn"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:icon="@drawable/blika_logo" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="is.blikar.pictures.UILApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/blika_logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:screenOrientation="portrait" >
+        
+        <activity
+            android:name="is.blikar.blikinn.SplashScreenLogo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+ 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="is.blikar.blikinn.SplashScreenAd"></activity>
+        <activity android:name="is.blikar.blikinn.MainScreenActivity"></activity>
+        <activity android:name="is.blikar.blikinn.About"></activity>
+        <activity android:name="is.blikar.news.NewsScreenActivity"></activity>
+        <activity android:name="is.blikar.news.SingleNewsActivity"></activity>
+        <activity android:name="is.blikar.news.NewsWomanScreenActivity"></activity>
+        <activity android:name="is.blikar.news.SingleWomanNewsActivity"></activity>
+        <activity android:name="is.blikar.news.NewsActivity"></activity>
+        <activity android:name="is.blikar.games.ResultsMenActivity"></activity>
+        <activity android:name="is.blikar.games.NextGamesWomenActivity"></activity>
+        <activity android:name="is.blikar.games.NextGamesMenActivity"></activity>
+        <activity android:name="is.blikar.games.ResultsWomenActivity"></activity>
+        <activity android:name="is.blikar.games.LeagueMenActivity"></activity>
+        <activity android:name="is.blikar.games.LeagueWomenActivity"></activity>
+        <activity android:name="is.blikar.games.GamesNow"></activity>
+        <activity android:name="is.blikar.blikinn.PlayersMenScreenActivity"></activity>
+        <activity android:name="is.blikar.trophies.TrophiesMenScreenActivity"></activity>
+        <activity android:name="is.blikar.trophies.TrophiesWomenScreenActivity"></activity>
+        <activity android:name="is.blikar.trophies.TrophiesActivity"></activity>
+        <activity android:name="is.blikar.radio.RadioScreenActivity"></activity>
+        <activity android:name="is.blikar.players.SinglePlayerActivity_men" > </activity>
+		<activity android:name="is.blikar.players.SinglePlayerActivity_women" > </activity>
+		<activity android:name="is.blikar.players.PlayersWomenScreenActivity" > </activity>
+		<activity android:name="is.blikar.players.PlayersMenScreenActivity" > </activity>
+		<activity android:name="is.blikar.players.PlayersActivity" > </activity>
+		<activity android:name="is.blikar.pictures.ImageGridActivity" />
+        <activity android:name="is.blikar.pictures.ImagePagerActivity" />
+		
+		<activity
+        android:name="is.blikar.TV.TVListActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize">
+    	</activity>
+    	
+		<!-- Widget -->
+        <receiver android:name=".widget.UILWidgetProvider" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+                                
+    </application>
+    
+</manifest>

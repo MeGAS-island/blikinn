@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_background"
+    android:orientation="horizontal"
+    android:padding="2dp" >
+    
+    <TextView
+        android:id="@+id/date_women"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#7f8c8d"
+        android:textSize="10sp"
+        android:layout_marginTop="1dp"
+		android:paddingLeft="5dp"
+        android:text="27-11-2013"
+        android:textStyle="bold" />   
+       
+    <TextView
+        android:id="@+id/newsTitle_women"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prufu titill prufu titill prufu titill prufu titill prufu titill"
+        android:layout_below="@id/date_women"
+        android:textColor="#000000"
+        android:paddingRight="40dp"
+        android:paddingLeft="5dp" 
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/article_women"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/newsTitle"
+        android:gravity="right"
+        android:text=" "
+        android:layout_marginRight="5dp"
+        android:textSize="0sp"
+        android:textColor="@android:color/transparent"/>
+    
+     <TextView
+  	    android:id="@+id/newsPictureText_women"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/transparent" 
+        android:textSize="0sp">
+     </TextView>
+    
+     <!-- Rightend Arrow -->    
+     <ImageView android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:src="@drawable/ic_arrow"
+     	android:layout_alignParentRight="true"
+     	android:layout_centerVertical="true"/>
+
+</RelativeLayout>

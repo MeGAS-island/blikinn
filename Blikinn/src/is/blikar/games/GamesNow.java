@@ -145,7 +145,7 @@ public class GamesNow extends Activity {
 					}
 				}
 				for(LeikirValue game : helper.leikir) {
-					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("EkkiHafinn")){
+					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("ÍGangi")){
 						if(game.getHeimalid().equals("Breiðablik")||game.getUtilid().equals("Breiðablik")){
 								builder.append("\n"+game.getHeimalid() + " ");
 								builder.append(game.getMarkHeima() + " - ");

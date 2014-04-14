@@ -33,9 +33,9 @@ public class SingleWomanNewsActivity extends Activity {
         setContentView(R.layout.news_single_women);
         
         options = new DisplayImageOptions.Builder()
-		.showImageOnLoading(R.drawable.ic_stub)
-		.showImageForEmptyUri(R.drawable.ic_empty)
-		.showImageOnFail(R.drawable.ic_error)
+		.showImageOnLoading(R.drawable.ic_white)
+		.showImageForEmptyUri(R.drawable.ic_white)
+		.showImageOnFail(R.drawable.ic_white)
 		.cacheInMemory(true)
 		.cacheOnDisc(true)
 		.considerExifParams(true)

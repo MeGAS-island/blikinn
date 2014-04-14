@@ -39,6 +39,8 @@ import android.widget.TextView;
  * Description: This class is main menu with buttons to navigate
  *
  */
+
+// Snorri er meistari
 public class MainScreenActivity extends Activity {
 	JSONParser jParser = new JSONParser();
 	JSONArray photos = null;

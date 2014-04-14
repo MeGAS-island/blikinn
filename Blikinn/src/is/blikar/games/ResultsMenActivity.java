@@ -80,6 +80,16 @@ public class ResultsMenActivity extends Activity {
 			}
 		});
 		
+		Button toggle = (Button) findViewById(R.id.btntoggle);	
+		toggle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mSlideHolder.toggle();
+				
+			}
+		});
+		
 		Button btnNextGamesMen = (Button) findViewById(R.id.btnNextGamesMen);	
 		btnNextGamesMen.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {

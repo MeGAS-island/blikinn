@@ -1,14 +1,46 @@
-<is.blikar.utils.SlideHolder xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+<Button
+    android:id="@+id/LeikirHeader"
+    android:layout_width="342dp"
+    android:layout_height="60dp"
+    android:layout_x="54dp"
+    android:layout_y="0dp"
+    android:background="#27ae60"
+    android:text="Leikir og úrslit"
+    android:textColor="#FFFFFF"
+    android:textSize="30sp"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/btntoggle"
+    android:layout_width="81dp"
+    android:layout_height="74dp"
+    android:layout_x="-10dp"
+    android:layout_y="-1dp"
+    android:background="#27ae60"
+    android:text="Slider"
+    android:textColor="#FFFFFF"
+    android:textSize="15sp" />
+    
+    
+<is.blikar.utils.SlideHolder
     android:id="@+id/slideHolder"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="487dp"
+    android:layout_x="0dp"
+    android:layout_y="60dp"
     android:background="#FFFFFF" >
-        
+         
     <ScrollView
         android:layout_width="150dp"
         android:layout_height="fill_parent"
         android:background="#27ae60" >
+        
+
 
         <LinearLayout
             android:layout_width="150dp"
@@ -19,7 +51,7 @@
        		 	android:id="@+id/textViewLine10"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />            
+        		android:background="#008000" />         
 
             <Button
                 android:id="@+id/btnLiveGames"
@@ -194,9 +226,9 @@
     <ListView
         android:id="@+id/list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="480dp"
         android:divider="#ffffff"
-        android:dividerHeight="1px"/>
+        android:dividerHeight="1px" />
 
     <LinearLayout
         android:id="@+id/slideScreen"
@@ -208,3 +240,6 @@
     
 </is.blikar.utils.SlideHolder>
 
+
+
+</AbsoluteLayout>

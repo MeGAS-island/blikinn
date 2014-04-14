@@ -12,12 +12,14 @@ import is.blikar.blikinn.R;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 /**
  * 
  * @author Guðný Lára Guðmundsdóttir
@@ -47,13 +49,30 @@ public class GamesNow extends Activity {
 		
 		mSlideHolder = (SlideHolder) findViewById(R.id.slideHolder);
 		View toggleView = findViewById(R.id.slideScreen);
-		
+	
 		toggleView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				mSlideHolder.toggle();
 			}
 		});
+		
+		
+		Button toggle = (Button) findViewById(R.id.btntoggle);	
+		toggle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				mSlideHolder.toggle();
+				
+			}
+		});
+		
+		//Layout
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		TextView header = (TextView) findViewById(R.id.LeikirHeader);
+		header.setTypeface(font);   
+		
 		
 		Button btnResultsMen = (Button) findViewById(R.id.btnResultsMen);	
 		btnResultsMen.setOnClickListener(new View.OnClickListener() {

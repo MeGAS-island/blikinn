@@ -89,7 +89,7 @@ public class XMLParser extends DefaultHandler {
 	@Override
 	public void startElement(String uri, String localName, String qName,
 			Attributes attributes) throws SAXException {
-		Log.i(TAG, "TAG: " + localName);
+		//Log.i(TAG, "TAG: " + localName);
 		currTag = true;
 		currTagVal = "";
 		if(localName.equals("Mot")){

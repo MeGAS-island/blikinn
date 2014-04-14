@@ -29,9 +29,8 @@
             android:textColor="#ffffff"/>
   
   <ImageView android:id="@+id/newsPictureSingle_women"   
-	         android:layout_width="200dip"
-	         android:layout_height="200dip"
-	         android:paddingLeft="40dp"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
 	         android:src="@drawable/no_image"/>
 
   <TextView android:id="@+id/article_label_women"

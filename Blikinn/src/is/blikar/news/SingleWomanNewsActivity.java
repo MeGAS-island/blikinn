@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 /**
  * 
@@ -38,7 +39,7 @@ public class SingleWomanNewsActivity extends Activity {
 		.cacheInMemory(true)
 		.cacheOnDisc(true)
 		.considerExifParams(true)
-		.displayer(new RoundedBitmapDisplayer(20))
+		.displayer(new FadeInBitmapDisplayer(20))
 		.build();
         
         // Getting intent data

@@ -180,27 +180,23 @@ public class ResultsMenActivity extends Activity {
 				
 				// 1280020544 is the entryDate of a dummy game that is in the json string if there are no games
 				String DummygameMen = "1280020544";
+				String DummygameMen2 = "1399066932";
 			
-				if (DummygameMen.equals(entryDate)) {
-					date = "";
-					homeTeam = "Enginn leikur";
-					awayTeam = "";
-					tournament = "";
-					arena = "";
-					info = "";
+				if (!DummygameMen.equals(entryDate) && !DummygameMen2.equals(entryDate)) {
+					// adding each child node to HashMap key => value
+					map.put(MEN_DATE, date);
+					map.put(MEN_HOMETEAM, homeTeam);
+					map.put(MEN_AWAYTEAM, awayTeam);
+					map.put(MEN_DETAILS_HOMESCORE, homeScore);
+					map.put(MEN_DETAILS_AWAYSCORE, awayScore);
+					map.put(MEN_DETAILS_TOURNAMENT, tournament);
+					map.put(MEN_DETAILS_ARENA, arena);
+					map.put(MEN_DETAILS_INFO, info);
+
+					ResultsList.add(map);
 				}
 				
-				// adding each child node to HashMap key => value
-				map.put(MEN_DATE, date);
-				map.put(MEN_HOMETEAM, homeTeam);
-				map.put(MEN_AWAYTEAM, awayTeam);
-				map.put(MEN_DETAILS_HOMESCORE, homeScore);
-				map.put(MEN_DETAILS_AWAYSCORE, awayScore);
-				map.put(MEN_DETAILS_TOURNAMENT, tournament);
-				map.put(MEN_DETAILS_ARENA, arena);
-				map.put(MEN_DETAILS_INFO, info);
-
-				ResultsList.add(map);
+				
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

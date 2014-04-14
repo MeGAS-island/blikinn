@@ -69,7 +69,7 @@ public class NewsScreenActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(NewsScreenActivity.this);
-			pDialog.setMessage("Sæki fréttir...");
+			pDialog.setMessage("S√¶ki fr√©ttir...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();

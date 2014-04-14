@@ -5,6 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="#ffffff">
+  
   <TextView android:id="@+id/name_label_women"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -15,96 +16,259 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:background="#27ae60"
-            android:textColor="#ffffff"/>
-  <ImageView android:id="@+id/pictureLarge_women"   
-	         android:layout_width="200dip"
-	         android:layout_height="200dip"
-	         android:src="@drawable/no_image"/>
+            android:textColor="#ffffff"/>    
   
-    <TextView
+<ScrollView
+  android:id="@+id/scrollViewNews"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content" >
+  
+<LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical" >
+    
+
+  <ImageView android:id="@+id/pictureLarge_women"   
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:src="@drawable/no_image"/>
+
+
+
+  <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+      <TableRow
+          android:id="@+id/tableRow1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+          
+        <TextView
       android:id="@+id/birthday_text"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:paddingLeft="10dp"
       android:paddingTop="10dp"
+      android:text="Fædd: "
       android:textColor="#000000"
-      android:text="Fæðingardagur"
       android:textSize="15sp"
       android:textStyle="bold" />
-  
-  <TextView android:id="@+id/birthday_label_women"
+
+  <TextView
+      android:id="@+id/birthday_label_women"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:paddingLeft="10dp"
-      android:paddingTop="1dp"
+      android:text="Placeholder"
       android:textColor="#000000"
-      android:text="Placeholder" />
+      android:textSize="15sp" />
+          
+      </TableRow>
+
+      <TableRow
+          android:id="@+id/tableRow2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+          
+            <TextView
+              android:id="@+id/Leikir_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Leikir: "
+              android:textColor="#000000"
+              android:textSize="30sp"
+              android:textStyle="bold" />
+          
+
+            <TextView
+              android:id="@+id/totalGames_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="1dp"
+              android:text="Placeholder"
+              android:textColor="#000000"
+              android:textSize="30sp" />
+            
+            <TextView
+              android:id="@+id/Mork_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="15dp"
+              android:paddingTop="3dp"
+              android:text="Mörk: "
+              android:textColor="#000000"
+              android:textSize="30sp"
+              android:textStyle="bold" /> 
+            
+
+           <TextView
+              android:id="@+id/totalGoals_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="1dp"
+              android:text="Placeholder"
+              android:textColor="#000000"
+              android:textSize="30sp" />
+      </TableRow>
+
+      
+
+      <TableRow
+          android:id="@+id/tableRow3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+           
+           <TextView
+              android:id="@+id/tournament_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Mót"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/games_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Leikir"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/goals_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Mörk"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+      </TableRow>
+
+      <TableRow
+          android:id="@+id/tableRow4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+      
+            <TextView
+              android:id="@+id/league_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Deildin"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+          
+
+           <TextView
+              android:id="@+id/leagueGames_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:textColor="#000000"
+               />
+
+      <TextView android:id="@+id/leagueGoals_label_women"
+          android:layout_width="fill_parent" 
+          android:layout_height="wrap_content"
+          android:paddingLeft="10dp"
+          android:paddingTop="3dp"
+          android:textColor="#000000" 
+           />
+
+      </TableRow>
+      
+            <TableRow
+          android:id="@+id/tableRow5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+          
+           <TextView
+              android:id="@+id/cup_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Bikar"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/cupGames_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:textColor="#000000"
+               />
+
+          <TextView
+              android:id="@+id/cupGoals_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:textColor="#000000"
+               />
+
+      </TableRow>
+      
+      <TableRow
+          android:id="@+id/tableRow6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+          
+           <TextView
+              android:id="@+id/europe_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:text="Evrópa"
+              android:textColor="#000000"
+              android:textSize="15sp"
+              android:textStyle="bold" />      
+
+          <TextView
+              android:id="@+id/europeGoals_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:textColor="#000000"
+               />
+
+          <TextView
+              android:id="@+id/europeGames_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="3dp"
+              android:textColor="#000000"
+               />
+
+      </TableRow>
+      
+      
+  </TableLayout>
   
-    <TextView
-      android:id="@+id/games_text"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:paddingLeft="10dp"
-      android:paddingTop="3dp"
-      android:textColor="#000000"
-      android:text="Leikir"
-      android:textSize="15sp"
-      android:textStyle="bold" />  
-  
-  <TextView android:id="@+id/totalGames_label_women"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Placeholder"
-        android:paddingLeft="10dp"
-      	android:paddingTop="1dp"
-        android:textColor="#000000" />
-  
-    <TextView
-      android:id="@+id/goals_text"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:paddingLeft="10dp"
-      android:paddingTop="3dp"
-      android:textColor="#000000"
-      android:text="Fjöldi marka"
-      android:textSize="15sp"
-      android:textStyle="bold" />  
-  
-  <TextView android:id="@+id/totalGoals_label_women"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingTop="1dp"
-        android:text="Placeholder"
-        android:textColor="#000000" />
-  <TextView android:id="@+id/leagueGames_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
-  <TextView android:id="@+id/leagueGoals_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
-  <TextView android:id="@+id/cupGames_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
-  <TextView android:id="@+id/cupGoals_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
-  <TextView android:id="@+id/europeGames_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
-  <TextView android:id="@+id/europeGoals_label_women"
-      		android:layout_width="fill_parent"
-      		android:layout_height="wrap_content"
-      		android:textStyle="bold"
-      		android:textColor="#ffffff"/>
+    </LinearLayout>
+  </ScrollView> 
 </LinearLayout>

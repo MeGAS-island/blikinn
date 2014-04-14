@@ -41,8 +41,8 @@ public class ImagePagerActivity extends BaseActivity {
 			pagerPosition = savedInstanceState.getInt(STATE_POSITION);
 		}
 		options = new DisplayImageOptions.Builder()
-			.showImageForEmptyUri(R.drawable.ic_empty)
-			.showImageOnFail(R.drawable.ic_error)
+			.showImageForEmptyUri(R.drawable.ic_white)
+			.showImageOnFail(R.drawable.ic_white)
 			.resetViewBeforeLoading(true)
 			.cacheOnDisc(true)
 			.imageScaleType(ImageScaleType.EXACTLY)

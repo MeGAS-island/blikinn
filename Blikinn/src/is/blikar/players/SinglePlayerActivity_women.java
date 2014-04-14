@@ -8,6 +8,7 @@ import android.widget.TextView;
 import is.blikar.blikinn.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 /**
  * 
@@ -35,13 +36,13 @@ public class SinglePlayerActivity_women extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_player_women);
         options = new DisplayImageOptions.Builder()
-		.showImageOnLoading(R.drawable.ic_stub)
-		.showImageForEmptyUri(R.drawable.ic_empty)
-		.showImageOnFail(R.drawable.ic_error)
+		.showImageOnLoading(R.drawable.ic_white)
+		.showImageForEmptyUri(R.drawable.ic_white)
+		.showImageOnFail(R.drawable.ic_white)
 		.cacheInMemory(true)
 		.cacheOnDisc(true)
 		.considerExifParams(true)
-		.displayer(new RoundedBitmapDisplayer(20))
+		.displayer(new FadeInBitmapDisplayer(20))
 		.build();
 
         Intent in = getIntent();

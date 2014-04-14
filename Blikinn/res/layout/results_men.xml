@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="#FFFFFF">  
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+    android:orientation="horizontal">  
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -22,8 +16,6 @@
                     android:id="@+id/hometeamResults_men"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="2dip"
-                    android:paddingTop="6dip"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -32,28 +24,23 @@
                     android:id="@+id/homescoreResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"/>
 
                 <TextView
                     android:id="@+id/awayscoreResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:paddingRight="5dp"
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/awayteamResults_men"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:paddingBottom="2dip"
-                    android:paddingTop="6dip"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
             </TableRow>
 
@@ -66,15 +53,12 @@
                     android:id="@+id/arenaResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textColor="#000000"/>
 
                 <TextView
                     android:id="@+id/dateResults_men"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="2dip"
                     android:textColor="#000000" />
 
             </TableRow>
@@ -88,20 +72,20 @@
                     android:id="@+id/infoResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textColor="#000000" />
 
                 <TextView
                     android:id="@+id/tournamentResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textColor="#000000" />
 
             </TableRow>
         </TableLayout>
-    </LinearLayout>
-
-</LinearLayout>
+        
+      <TextView
+        android:id="@+id/Line00"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#27ae60" /> 
+</RelativeLayout>

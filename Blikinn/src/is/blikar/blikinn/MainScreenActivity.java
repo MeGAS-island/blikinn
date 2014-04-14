@@ -40,7 +40,6 @@ import android.widget.TextView;
  *
  */
 
-// Snorri er meistari
 public class MainScreenActivity extends Activity {
 	JSONParser jParser = new JSONParser();
 	JSONArray photos = null;

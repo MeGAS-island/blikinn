@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/MainScreenHeader"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+    	android:background="#27ae60"
+        android:text="@string/app_name"
+		android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+    
+ 	<TextView
+        android:id="@+id/Line00"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#27ae60" />   
+
+    <Button
+        android:id="@+id/btnNews"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_news_color"
+        android:gravity="left|center_vertical"
+		android:drawablePadding="20dp"
+        android:paddingLeft="20dp"
+        android:text="@string/btnNewsMainScreenText"
+        android:textSize="15sp" />
+    
+	<TextView
+        android:id="@+id/Line01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />
+
+    <Button
+        android:id="@+id/btnGames"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_games_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnGamesResultsMainScreenText"
+        android:textSize="15sp" />
+    
+	<TextView
+        android:id="@+id/Line02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />
+
+    <Button
+        android:id="@+id/btnPlayers"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_player_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnPlayersMainScreenText"
+        android:textSize="15sp" />
+    
+	<TextView
+        android:id="@+id/Line03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />
+    
+	<Button
+        android:id="@+id/btnTrophies"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_news_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnTrophiesMainScreenText"
+        android:textSize="15sp" />
+	
+	<TextView
+        android:id="@+id/Line04"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />	
+	
+	<Button
+        android:id="@+id/btnPhotos"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_news_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnPicturesMainScreenText"
+        android:textSize="15sp" />
+	
+	<TextView
+        android:id="@+id/Line05"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />
+	
+	<Button
+        android:id="@+id/btnRadio"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_news_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnRadioMainScreenText"
+        android:textSize="15sp" />
+	
+	<TextView
+        android:id="@+id/Line06"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7f8c8d" />	
+	
+	<Button
+        android:id="@+id/btnTV"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/ic_arrow"
+        android:drawableLeft="@drawable/ic_news_color"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="@string/btnTvMainScreenText"
+        android:textSize="15sp" />			
+
+</LinearLayout>

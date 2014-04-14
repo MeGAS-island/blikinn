@@ -55,7 +55,7 @@ public class MainScreenActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_screen_2);
+		setContentView(R.layout.main_screen_4);
 		
 		cd = new ConnectionDetector(getApplicationContext());
         isInternetOn = cd.isConnectingToInternet();
@@ -77,7 +77,7 @@ public class MainScreenActivity extends Activity {
         
         //Layout
 		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
-		TextView header = (TextView) findViewById(R.id.BlikinnHeader);
+		TextView header = (TextView) findViewById(R.id.MainScreenHeader);
 		header.setTypeface(font);       
 	
 		//BUTTONS

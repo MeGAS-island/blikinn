@@ -33,14 +33,17 @@ public class ResultsWomenActivity extends Activity {
 	private ProgressDialog pDialog;
 	private SlideHolder mSlideHolder;
 	
+	public boolean jsonNull = false;
+	
 	JSONParser jParser = new JSONParser();
 	
 	ArrayList<HashMap<String, String>> ResultsList;
 	
 	ListView list;
     LazyAdapter_results_women adapter;
+    LazyAdapter_noGame adapter_noGame;
     
-	private static String url = "http://blikar.is/app/resultsFemaleJSON.php";
+	private static String url = "http://www.blikar.is/app/resultsFemaleJSON.php";
 	
 	// JSON Node names
 	public static final String WOMEN_GAMES = "games";
@@ -168,58 +171,57 @@ public class ResultsWomenActivity extends Activity {
 		protected String doInBackground(String... args) {
 
 		JSONObject json = jParser.getJSONFromUrl(url);
+		if (json == null) {
+			jsonNull = true;
+			HashMap<String, String> map = new HashMap<String, String>();
 		
-
-		try {
-			results = json.getJSONArray(WOMEN_GAMES);
-			
-			for(int i = 0; i < results.length(); i++){
-				JSONObject c = results.getJSONObject(i);
+			ResultsList.add(map);
+		} else {
+			try {
+				results = json.getJSONArray(WOMEN_GAMES);
 				
-				// Storing each json item in variable
-				String entryDate = c.getString(WOMEN_ENTRYDATE);
-				String date = c.getString(WOMEN_DATE);
-				String homeTeam = c.getString(WOMEN_HOMETEAM);
-				String awayTeam = c.getString(WOMEN_AWAYTEAM);
+				for(int i = 0; i < results.length(); i++){
+					JSONObject c = results.getJSONObject(i);
+					
+					// Storing each json item in variable
+					String entryDate = c.getString(WOMEN_ENTRYDATE);
+					String date = c.getString(WOMEN_DATE);
+					String homeTeam = c.getString(WOMEN_HOMETEAM);
+					String awayTeam = c.getString(WOMEN_AWAYTEAM);
+					
+					JSONObject details = c.getJSONObject(WOMEN_DETAILS);
+					String homeScore = details.getString(WOMEN_DETAILS_HOMESCORE);
+					String awayScore = details.getString(WOMEN_DETAILS_AWAYSCORE);
+					String tournament = details.getString(WOMEN_DETAILS_TOURNAMENT);
+					String arena = details.getString(WOMEN_DETAILS_ARENA);
+					String info = details.getString(WOMEN_DETAILS_INFO);
+	
+					HashMap<String, String> map = new HashMap<String, String>();
+					
+					String DummygameMen = "1280020544";
 				
-				JSONObject details = c.getJSONObject(WOMEN_DETAILS);
-				String homeScore = details.getString(WOMEN_DETAILS_HOMESCORE);
-				String awayScore = details.getString(WOMEN_DETAILS_AWAYSCORE);
-				String tournament = details.getString(WOMEN_DETAILS_TOURNAMENT);
-				String arena = details.getString(WOMEN_DETAILS_ARENA);
-				String info = details.getString(WOMEN_DETAILS_INFO);
-
-				HashMap<String, String> map = new HashMap<String, String>();
-				
-				// 1280020544 is the entryDate of a dummy game that is in the json string if there are no games
-				String DummygameWomen = "1280020544";
-				if (DummygameWomen.equals(entryDate)) {
-					date = "";
-					homeTeam = "Enginn leikur";
-					awayTeam = "";
-					tournament = "";
-					arena = "";
-					info = "";
+					if (!DummygameMen.equals(entryDate)) {
+						// adding each child node to HashMap key => value
+						map.put(WOMEN_DATE, date);
+						map.put(WOMEN_HOMETEAM, homeTeam);
+						map.put(WOMEN_AWAYTEAM, awayTeam);
+						map.put(WOMEN_DETAILS_HOMESCORE, homeScore);
+						map.put(WOMEN_DETAILS_AWAYSCORE, awayScore);
+						map.put(WOMEN_DETAILS_TOURNAMENT, tournament);
+						map.put(WOMEN_DETAILS_ARENA, arena);
+						map.put(WOMEN_DETAILS_INFO, info);
+	
+						ResultsList.add(map);
+					}
+					
 				}
-				
-				// adding each child node to HashMap key => value
-				map.put(WOMEN_DATE, date);
-				map.put(WOMEN_HOMETEAM, homeTeam);
-				map.put(WOMEN_AWAYTEAM, awayTeam);
-				map.put(WOMEN_DETAILS_HOMESCORE, homeScore);
-				map.put(WOMEN_DETAILS_AWAYSCORE, awayScore);
-				map.put(WOMEN_DETAILS_TOURNAMENT, tournament);
-				map.put(WOMEN_DETAILS_ARENA, arena);
-				map.put(WOMEN_DETAILS_INFO, info);
-
-				ResultsList.add(map);
+			} catch (JSONException e) {
+				e.printStackTrace();
 			}
-		} catch (JSONException e) {
-			e.printStackTrace();
+			}
+			return null;		
 		}
-		return null;		
-	}
-		
+			
 		//After completing background task Dismiss the progress dialog
 		protected void onPostExecute(String file_url) {
 			
@@ -227,7 +229,11 @@ public class ResultsWomenActivity extends Activity {
 			runOnUiThread(new Runnable() {
 				
 				public void run() {
-					list.setAdapter(adapter);
+					if (jsonNull) {
+						list.setAdapter(adapter_noGame);
+					} else {
+						list.setAdapter(adapter);
+					}
 				}
 			});
 		}		

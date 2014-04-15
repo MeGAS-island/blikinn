@@ -33,14 +33,17 @@ public class ResultsMenActivity extends Activity {
 	private ProgressDialog pDialog;
 	private SlideHolder mSlideHolder;
 	
+	public boolean jsonNull = false;
+	
 	JSONParser jParser = new JSONParser();
 	
 	ArrayList<HashMap<String, String>> ResultsList;
 	
 	ListView list;
     LazyAdapter_results_men adapter;
+    LazyAdapter_noGame adapter_noGame;
 	
-	private static String url = "http://blikar.is/app/resultsMaleJSON.php";
+	private static String url = "http://www.blikar.is/app/resultsMaleJSON.php";
 	
 	// JSON Node names
 	public static final String MEN_GAMES = "games";
@@ -166,59 +169,69 @@ public class ResultsMenActivity extends Activity {
 		
 		protected String doInBackground(String... args) {
 			JSONObject json = jParser.getJSONFromUrl(url);
-
-		try {
-			results = json.getJSONArray(MEN_GAMES);
-	
-			for(int i = 0; i < results.length(); i++){
-				JSONObject c = results.getJSONObject(i);
-				
-				// Storing each json item in variable
-				String entryDate = c.getString(MEN_ENTRYDATE);
-				String date = c.getString(MEN_DATE);
-				String homeTeam = c.getString(MEN_HOMETEAM);
-				String awayTeam = c.getString(MEN_AWAYTEAM);
-				
-				JSONObject details = c.getJSONObject(MEN_DETAILS);
-				String homeScore = details.getString(MEN_DETAILS_HOMESCORE);
-				String awayScore = details.getString(MEN_DETAILS_AWAYSCORE);
-				String tournament = details.getString(MEN_DETAILS_TOURNAMENT);
-				String arena = details.getString(MEN_DETAILS_ARENA);
-				String info = details.getString(MEN_DETAILS_INFO);
-				
+			if (json == null) {
+				jsonNull = true;
 				HashMap<String, String> map = new HashMap<String, String>();
-				
-				// 1280020544 is the entryDate of a dummy game that is in the json string if there are no games
-				String DummygameMen = "1280020544";
-				String DummygameMen2 = "1399066932";
 			
-				if (!DummygameMen.equals(entryDate) && !DummygameMen2.equals(entryDate)) {
-					// adding each child node to HashMap key => value
-					map.put(MEN_DATE, date);
-					map.put(MEN_HOMETEAM, homeTeam);
-					map.put(MEN_AWAYTEAM, awayTeam);
-					map.put(MEN_DETAILS_HOMESCORE, homeScore);
-					map.put(MEN_DETAILS_AWAYSCORE, awayScore);
-					map.put(MEN_DETAILS_TOURNAMENT, tournament);
-					map.put(MEN_DETAILS_ARENA, arena);
-					map.put(MEN_DETAILS_INFO, info);
-
-					ResultsList.add(map);
+				ResultsList.add(map);
+			} else {
+				try {
+					results = json.getJSONArray(MEN_GAMES);
+			
+					for(int i = 0; i < results.length(); i++){
+						JSONObject c = results.getJSONObject(i);
+						
+						// Storing each json item in variable
+						String entryDate = c.getString(MEN_ENTRYDATE);
+						String date = c.getString(MEN_DATE);
+						String homeTeam = c.getString(MEN_HOMETEAM);
+						String awayTeam = c.getString(MEN_AWAYTEAM);
+						
+						JSONObject details = c.getJSONObject(MEN_DETAILS);
+						String homeScore = details.getString(MEN_DETAILS_HOMESCORE);
+						String awayScore = details.getString(MEN_DETAILS_AWAYSCORE);
+						String tournament = details.getString(MEN_DETAILS_TOURNAMENT);
+						String arena = details.getString(MEN_DETAILS_ARENA);
+						String info = details.getString(MEN_DETAILS_INFO);
+						
+						HashMap<String, String> map = new HashMap<String, String>();
+						
+						// 1280020544 is the entryDate of a dummy game that is in the json string if there are no games
+						String DummygameMen = "1280020544";
+						String DummygameMen2 = "1399066932";
+					
+						if (!DummygameMen.equals(entryDate) && !DummygameMen2.equals(entryDate)) {
+							// adding each child node to HashMap key => value
+							map.put(MEN_DATE, date);
+							map.put(MEN_HOMETEAM, homeTeam);
+							map.put(MEN_AWAYTEAM, awayTeam);
+							map.put(MEN_DETAILS_HOMESCORE, homeScore);
+							map.put(MEN_DETAILS_AWAYSCORE, awayScore);
+							map.put(MEN_DETAILS_TOURNAMENT, tournament);
+							map.put(MEN_DETAILS_ARENA, arena);
+							map.put(MEN_DETAILS_INFO, info);
+		
+							ResultsList.add(map);
+						}
+						
+						
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
 				}
-				
-				
 			}
-		} catch (JSONException e) {
-			e.printStackTrace();
+				return null;
 		}
-		return null;		
-	}
 		//After completing background task Dismiss the progress dialog
 		protected void onPostExecute(String file_url) {
 			pDialog.dismiss();
 			runOnUiThread(new Runnable() {
 				public void run() {				
-					list.setAdapter(adapter);
+					if (jsonNull) {
+						list.setAdapter(adapter_noGame);
+					} else {
+						list.setAdapter(adapter);
+					}
 				}
 			});
 		}		

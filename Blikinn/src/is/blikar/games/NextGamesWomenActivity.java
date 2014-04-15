@@ -33,15 +33,18 @@ public class NextGamesWomenActivity extends Activity {
 	private ProgressDialog pDialog;
 	private SlideHolder mSlideHolder;
 	
+	public boolean jsonNull = false;
+	
 	JSONParser jParser = new JSONParser();
 	
 	ArrayList<HashMap<String, String>> NextGamesList;
 	
 	ListView list;
     LazyAdapter_nextGames_women adapter;
+    LazyAdapter_noGame adapter_noGame;
 	
 	// url to make request
-	private static String url = "http://blikar.is/app/nextGamesFemaleJSON.php";
+	private static String url = "http://blikar.is";
 	
 	// JSON Node names
 	public static final String WOMEN_GAMES = "games";
@@ -65,6 +68,7 @@ public class NextGamesWomenActivity extends Activity {
 
 		NextGamesList = new ArrayList<HashMap<String, String>>();
 		adapter=new LazyAdapter_nextGames_women(this, NextGamesList);
+		adapter_noGame = new LazyAdapter_noGame(this, NextGamesList);
 		
 		new LoadNextGames().execute();
 		
@@ -159,57 +163,67 @@ public class NextGamesWomenActivity extends Activity {
 		
 		protected String doInBackground(String... args) {
 			JSONObject json = jParser.getJSONFromUrl(url);
-			try {
-				nextGames = json.getJSONArray(WOMEN_GAMES);
+			if (json == null) {
+				jsonNull = true;
+				HashMap<String, String> map = new HashMap<String, String>();
 			
-				for(int i = 0; i < nextGames.length(); i++){
-					JSONObject c = nextGames.getJSONObject(i);
+				NextGamesList.add(map);
+			} else {
+				try {
+					nextGames = json.getJSONArray(WOMEN_GAMES);
 				
-					// Storing each json item in variable
-					String entryDate = c.getString(WOMEN_ENTRYDATE);
-					String date = c.getString(WOMEN_DATE);
-					String homeTeam = c.getString(WOMEN_HOMETEAM);
-					String awayTeam = c.getString(WOMEN_AWAYTEAM);
+					for(int i = 0; i < nextGames.length(); i++){
+						JSONObject c = nextGames.getJSONObject(i);
 					
-					JSONObject details = c.getJSONObject(WOMEN_DETAILS);
-					String tournament = details.getString(WOMEN_DETAILS_TOURNAMENT);
-					String arena = details.getString(WOMEN_DETAILS_ARENA);
-					String info = details.getString(WOMEN_DETAILS_INFO);
-				
-					HashMap<String, String> map = new HashMap<String, String>();
+						// Storing each json item in variable
+						String entryDate = c.getString(WOMEN_ENTRYDATE);
+						String date = c.getString(WOMEN_DATE);
+						String homeTeam = c.getString(WOMEN_HOMETEAM);
+						String awayTeam = c.getString(WOMEN_AWAYTEAM);
+						
+						JSONObject details = c.getJSONObject(WOMEN_DETAILS);
+						String tournament = details.getString(WOMEN_DETAILS_TOURNAMENT);
+						String arena = details.getString(WOMEN_DETAILS_ARENA);
+						String info = details.getString(WOMEN_DETAILS_INFO);
 					
-					// 1280020544 is the entryDate of a dummy game that is in the json string if there are no games
-					if ("1362227427".equals(entryDate)) {
-						date = "";
-						homeTeam = "Enginn leikur";
-						awayTeam = "";
-						tournament = "";
-						arena = "";
-						info = "";
-					}
-					
-					map.put(WOMEN_DATE, date);
-					map.put(WOMEN_HOMETEAM, homeTeam);
-					map.put(WOMEN_AWAYTEAM, awayTeam);
-					map.put(WOMEN_DETAILS_TOURNAMENT, tournament);
-					map.put(WOMEN_DETAILS_ARENA, arena);
-					map.put(WOMEN_DETAILS_INFO, info);
+						HashMap<String, String> map = new HashMap<String, String>();
+						
 
-					NextGamesList.add(map);
+						String DummyGame1 = "1280020544";
+						String DummyGame2 = "1362227427";
+						
+						if (!DummyGame1.equals(entryDate) && !DummyGame2.equals(entryDate)) {
+							// adding each child node to HashMap key => value
+							map.put(WOMEN_DATE, date);
+							map.put(WOMEN_HOMETEAM, homeTeam);
+							map.put(WOMEN_AWAYTEAM, awayTeam);
+							map.put(WOMEN_DETAILS_TOURNAMENT, tournament);
+							map.put(WOMEN_DETAILS_ARENA, arena);
+							map.put(WOMEN_DETAILS_INFO, info);
+
+							NextGamesList.add(map);
+						}
+						
+					}
+				} 
+				catch (JSONException e) {
+					e.printStackTrace();
 				}
-			} 
-			catch (JSONException e) {
-				e.printStackTrace();
 			}
-		return null;
-	}
+			return null;
+		}
 		
 		//After completing background task Dismiss the progress dialog
 		protected void onPostExecute(String file_url) {
+			
 			pDialog.dismiss();
 			runOnUiThread(new Runnable() {
 				public void run() {
-					list.setAdapter(adapter);
+					if (jsonNull) {
+						list.setAdapter(adapter_noGame);
+					} else {
+						list.setAdapter(adapter);
+					}
 				}
 			});
 		}

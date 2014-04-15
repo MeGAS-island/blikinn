@@ -44,7 +44,7 @@ public class NextGamesWomenActivity extends Activity {
     LazyAdapter_noGame adapter_noGame;
 	
 	// url to make request
-	private static String url = "http://blikar.is";
+	private static String url = "http://www.blikar.is/app/nextGamesFemaleJSON.php";
 	
 	// JSON Node names
 	public static final String WOMEN_GAMES = "games";

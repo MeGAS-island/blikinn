@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,7 +90,7 @@ public class LazyAdapter_newsWomen extends BaseAdapter {
         news = data.get(position);
 		
 		holder.newsTitle.setText(news.get(NewsWomanScreenActivity.TAG_NEWSTITLE));
-		holder.article.setText(news.get(NewsWomanScreenActivity.TAG_DETAILS_ARTICLE));
+		holder.article.setText(Html.fromHtml(news.get(NewsWomanScreenActivity.TAG_DETAILS_ARTICLE)));
 		holder.date.setText(news.get(NewsWomanScreenActivity.TAG_DETAILS_DATE));
 		holder.newsPictureText.setText(news.get(NewsWomanScreenActivity.TAG_DETAILS_NEWSPICTURE));
 

@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -26,8 +27,11 @@ import android.util.Log;
  */
 public class XMLParseWomenLeague extends DefaultHandler { 
 	
-	//The URL to be parsed 
-	private String URL_MAIN = "http://urslit.1x2.is/urslit/xml.exe/stadamots?mot=ISL011&Deild=1&Timabil=2013";
+	Calendar calendar = Calendar.getInstance();
+	int year = calendar.get(Calendar.YEAR);
+	
+	//The URL to be parsed 	
+	private String URL_MAIN = "http://urslit.1x2.is/urslit/xml.exe/stadamots?mot=ISL011&Deild=1&Timabil=" + year;
 	String TAG = "XMLParseWomenLeague";
 	
 	Boolean currTag = false;

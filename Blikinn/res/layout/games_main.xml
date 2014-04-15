@@ -5,7 +5,7 @@
     
 <Button
     android:id="@+id/LeikirHeader"
-    android:layout_width="360dp"
+    android:layout_width="400dp"
     android:layout_height="50dp"
     android:layout_x="0dp"
     android:layout_y="0dp"

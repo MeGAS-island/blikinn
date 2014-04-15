@@ -2,7 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">  
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="2dp"> 
+    
+<TextView
+	 android:id="@+id/dateResults_men"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#7f8c8d"
+        android:textSize="10sp"
+        android:layout_marginTop="1dp"
+		android:paddingLeft="5dp"
+        android:text="27-11-2013"
+        android:textStyle="bold" /> 
+    
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -44,44 +58,25 @@
 
             </TableRow>
 
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/arenaResults_men"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000"/>
-
-                <TextView
-                    android:id="@+id/dateResults_men"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/infoResults_men"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000000" />
-
-                <TextView
+        </TableLayout>
+        
+        <TextView
                     android:id="@+id/tournamentResults_men"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000" />
-
-            </TableRow>
-        </TableLayout>
+                
+        <TextView
+                    android:id="@+id/infoResults_men"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000" />
+        
+         <TextView
+                    android:id="@+id/arenaResults_men"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"/>
         
       <TextView
         android:id="@+id/Line00"

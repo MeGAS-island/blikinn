@@ -5,8 +5,8 @@
     
 <Button
     android:id="@+id/LeikirHeader"
-    android:layout_width="333dp"
-    android:layout_height="60dp"
+    android:layout_width="360dp"
+    android:layout_height="50dp"
     android:layout_x="0dp"
     android:layout_y="0dp"
     android:background="#27ae60"
@@ -19,7 +19,7 @@
 <Button
     android:id="@+id/btntoggle"
     android:layout_width="60dp"
-    android:layout_height="60dp"
+    android:layout_height="50dp"
     android:layout_x="0dp"
     android:layout_y="0dp"
     android:background="#27ae60"
@@ -29,9 +29,9 @@
 <is.blikar.utils.SlideHolder
     android:id="@+id/slideHolder"
     android:layout_width="fill_parent"
-    android:layout_height="450dp"
+    android:layout_height="518dp"
     android:layout_x="0dp"
-    android:layout_y="60dp"
+    android:layout_y="50dp"
     android:background="#FFFFFF" >
          
     <ScrollView

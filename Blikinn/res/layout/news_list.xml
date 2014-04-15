@@ -22,7 +22,7 @@
         android:id="@+id/newsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prufu titill prufu titill prufu titill prufu titill prufu titill"
+        android:text="Prufu titill"
         android:layout_below="@id/date"
         android:textColor="#000000"
         android:paddingRight="40dp"

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ffffff" >
 
     <Button
         android:id="@+id/MainScreenHeader"
@@ -10,7 +11,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
     	android:background="#27ae60"
-        android:text="@string/app_name"
+        android:text="@string/app_name" 
 		android:textSize="45sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF" />
@@ -27,7 +28,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_news_color"
         android:gravity="left|center_vertical"
 		android:drawablePadding="10dp"
@@ -39,7 +40,8 @@
         android:id="@+id/Line01"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />
+        android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />
 
     <Button
         android:id="@+id/btnGames"
@@ -47,7 +49,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_games_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"
@@ -59,7 +61,8 @@
         android:id="@+id/Line02"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />
+        android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />
 
     <Button
         android:id="@+id/btnPlayers"
@@ -67,7 +70,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_player_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"
@@ -79,7 +82,8 @@
         android:id="@+id/Line03"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />
+		android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />
     
 	<Button
         android:id="@+id/btnTrophies"
@@ -87,7 +91,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_trophy_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"
@@ -99,7 +103,8 @@
         android:id="@+id/Line04"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />	
+        android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />	
 	
 	<Button
         android:id="@+id/btnPhotos"
@@ -107,7 +112,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_photo_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"
@@ -119,7 +124,8 @@
         android:id="@+id/Line05"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />
+        android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />
 	
 	<Button
         android:id="@+id/btnRadio"
@@ -127,7 +133,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_radio_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"
@@ -139,7 +145,8 @@
         android:id="@+id/Line06"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#7f8c8d" />	
+        android:layout_marginLeft="68dp"
+        android:background="@color/light_grey" />	
 	
 	<Button
         android:id="@+id/btnTV"
@@ -147,7 +154,7 @@
 		android:layout_height="wrap_content"
 		android:layout_weight="1"
         android:background="@drawable/button_background"
-        android:drawableRight="@drawable/ic_arrow"
+        android:drawableRight="@drawable/ic_arrow_grey"
         android:drawableLeft="@drawable/ic_tv_color"
         android:gravity="left|center_vertical"
         android:drawablePadding="10dp"

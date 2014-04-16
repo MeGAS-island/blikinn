@@ -2,10 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFFFFF" >
 
     <RelativeLayout
@@ -18,7 +14,8 @@
       		android:layout_width="match_parent"
       		android:layout_height="wrap_content"
       		android:stretchColumns="2,3,4,5,6,7,8"
-      		android:paddingLeft="30dp" >
+      		android:layout_marginLeft="15dp"
+      		android:layout_marginRight="15dp" >
       		
 	      <TableRow
 	          android:id="@+id/tableRow2"
@@ -29,7 +26,6 @@
 	            android:id="@+id/Pos"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="8dp"
 	            android:text=""
 	            android:textColor="#000000" />
 	
@@ -37,7 +33,6 @@
 	            android:id="@+id/Team"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="18dp"
 	            android:text=""
 	            android:textStyle="bold"
 	            android:textColor="#000000" />
@@ -46,7 +41,6 @@
 	            android:id="@+id/Games"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="L" 
 	            android:textStyle="bold"
@@ -56,7 +50,6 @@
 	            android:id="@+id/Wins"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="S" 
 	            android:textStyle="bold"
@@ -66,7 +59,6 @@
 	            android:id="@+id/Draws"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="J"
 	            android:textStyle="bold"
@@ -76,41 +68,20 @@
 	            android:id="@+id/Losses"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="T"
 	            android:textStyle="bold"
 	            android:textColor="#000000" />
-			
-			<TextView
-	            android:id="@+id/GoalsFor"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:paddingRight="1dp"
-	            android:gravity="right"
-	            android:text=""
-	            android:textColor="#27ae60"
-	             />	
-	            
+			    
 	 		<TextView
-	            android:id="@+id/Separator"
+	            android:id="@+id/Goals"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="1dp"
 	            android:gravity="center"
 	            android:text="Mörk"
 	            android:textStyle="bold" 
 	            android:textColor="#000000"/>
 	 		           	 				
-			<TextView
-	            android:id="@+id/GoalsAgainst"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
-	            android:gravity="left"
-	            android:text=""
-	            android:textColor="#c0392b" />	
-	 
 			<TextView
 	            android:id="@+id/Points"
 	            android:layout_width="wrap_content"
@@ -126,13 +97,12 @@
 	      <TableRow
 	          android:id="@+id/tableRow2"
 	          android:layout_width="wrap_content"
-	          android:layout_height="wrap_content" >
+	          android:layout_height="wrap_content">
 	        
 	        <TextView
 	            android:id="@+id/tvPos"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="8dp"
 	            android:text="No"
 	            android:textColor="#000000" />
 	
@@ -140,7 +110,6 @@
 	            android:id="@+id/tvTeam"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="18dp"
 	            android:text="T"
 	            android:textStyle="bold"
 	            android:textColor="#000000" />
@@ -149,7 +118,6 @@
 	            android:id="@+id/tvGames"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="G" 
 	            android:textColor="#000000"/>       
@@ -158,7 +126,6 @@
 	            android:id="@+id/tvWins"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="W" 
 	            android:textColor="#000000"/>
@@ -167,7 +134,6 @@
 	            android:id="@+id/tvDraws"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="D"
 	            android:textColor="#000000" /> 
@@ -176,38 +142,18 @@
 	            android:id="@+id/tvLosses"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
 	            android:gravity="center"
 	            android:text="L"
 	            android:textColor="#000000" />
 			
 			<TextView
-	            android:id="@+id/tvGoalsFor"
+	            android:id="@+id/tvGoals"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingRight="1dp"
-	            android:gravity="right"
-	            android:text="GF"
-	            android:textColor="#27ae60"
-	             />	
-	            
-	 		<TextView
-	            android:id="@+id/tvSeparator"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:paddingRight="1dp"
 	            android:gravity="center"
-	            android:text=":" 
-	            android:textColor="#000000"/>
-	 		           	 				
-			<TextView
-	            android:id="@+id/tvGoalsAgainst"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:paddingRight="10dp"
-	            android:gravity="left"
-	            android:text="GA"
-	            android:textColor="#c0392b" />	
+	            android:text="Mörk"
+	            android:textColor="#000000"/>	
+	            
 	 
 			<TextView
 	            android:id="@+id/tvPoints"

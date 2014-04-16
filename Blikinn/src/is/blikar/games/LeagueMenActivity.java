@@ -39,10 +39,8 @@ public class LeagueMenActivity extends Activity {
 	public final static String TVWINS = "wins";
 	public final static String TVDRAWS = "draws";
 	public final static String TVLOSSES = "losses";
-	public final static String TVGOALSFOR = "goalsfor";
-	public final static String TVGOALSAGAINST = "goalsagainst";
+	public final static String TVGOALS = "goals";
 	public final static String TVPOINTS = "ponts";
-	public final static String TVSEPARATOR = "separator";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -200,26 +198,16 @@ public class LeagueMenActivity extends Activity {
 			}
 			String tvLosses = loss.toString();
 			
-			StringBuilder gf = new StringBuilder();
+			StringBuilder goals = new StringBuilder();
 			for(LeaguePosValue leaguePos : helper.leaguePositions) {
-				gf.append(leaguePos.getGoalsFor());																			
-				gf.append("\n\n");
+				goals.append(leaguePos.getGoalsFor());
+				goals.append(":");
+				goals.append(leaguePos.getGoalsAgainst());
+				goals.append("\n\n");
 			}
-			String tvGoalsFor = gf.toString();
+			String tvGoals = goals.toString();
 			
-			StringBuilder ga = new StringBuilder();
-			for(LeaguePosValue leaguePos : helper.leaguePositions) {
-				ga.append(leaguePos.getGoalsAgainst());																			
-				ga.append("\n\n");
-			}
-			String tvGoalsAgainst = ga.toString();
 			
-			StringBuilder separator = new StringBuilder();			
-			for(LeaguePosValue leaguePos : helper.leaguePositions) {
-				separator.append(":");																				
-				separator.append("\n\n");
-			}
-			String tvSeparator = separator.toString();
 			
 			StringBuilder points = new StringBuilder();			
 			for(LeaguePosValue leaguePos : helper.leaguePositions) {
@@ -244,10 +232,8 @@ public class LeagueMenActivity extends Activity {
 			map.put(TVWINS, tvWins);
 			map.put(TVDRAWS, tvDraws);
 			map.put(TVLOSSES, tvLosses);
-			map.put(TVGOALSFOR, tvGoalsFor);
-			map.put(TVGOALSAGAINST, tvGoalsAgainst);
+			map.put(TVGOALS, tvGoals);
 			map.put(TVPOINTS, tvPoints);
-			map.put(TVSEPARATOR, tvSeparator);
 			LeagueMenList.add(map);
 		}	
 	}	

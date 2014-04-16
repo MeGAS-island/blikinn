@@ -53,10 +53,8 @@ public class LazyAdapter_leagueWomen extends BaseAdapter {
         TextView tvWins = (TextView)vi.findViewById(R.id.tvWins);
         TextView tvDraws = (TextView)vi.findViewById(R.id.tvDraws);
         TextView tvLosses = (TextView)vi.findViewById(R.id.tvLosses);
-        TextView tvGoalsFor = (TextView)vi.findViewById(R.id.tvGoalsFor);
-        TextView tvGoalsAgainst = (TextView)vi.findViewById(R.id.tvGoalsAgainst);
+        TextView tvGoals = (TextView)vi.findViewById(R.id.tvGoals);
         TextView tvPoints = (TextView)vi.findViewById(R.id.tvPoints);
-        TextView tvSeparator = (TextView)vi.findViewById(R.id.tvSeparator);
         
         HashMap<String, String> games = new HashMap<String, String>();
         games = data.get(position);
@@ -68,10 +66,8 @@ public class LazyAdapter_leagueWomen extends BaseAdapter {
         tvWins.setText(games.get(LeagueWomenActivity.TVWINS));
         tvDraws.setText(games.get(LeagueWomenActivity.TVDRAWS));
         tvLosses.setText(games.get(LeagueWomenActivity.TVLOSSES));
-        tvGoalsFor.setText(games.get(LeagueWomenActivity.TVGOALSFOR));
-        tvGoalsAgainst.setText(games.get(LeagueWomenActivity.TVGOALSAGAINST));
+        tvGoals.setText(games.get(LeagueWomenActivity.TVGOALS));
         tvPoints.setText(games.get(LeagueWomenActivity.TVPOINTS));
-        tvSeparator.setText(games.get(LeagueWomenActivity.TVSEPARATOR));
                 
         return vi;
     }

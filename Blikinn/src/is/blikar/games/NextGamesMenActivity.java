@@ -72,6 +72,7 @@ public class NextGamesMenActivity extends Activity {
 
 		NextGamesList = new ArrayList<HashMap<String, String>>();
 		adapter=new LazyAdapter_nextGames_men(this, NextGamesList);
+		adapter_noGame=new LazyAdapter_noGame(this, NextGamesList);
 		
 		new LoadNextGames().execute();
 		

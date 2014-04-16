@@ -73,6 +73,7 @@ public class ResultsMenActivity extends Activity {
 
 		ResultsList = new ArrayList<HashMap<String, String>>();
 		adapter=new LazyAdapter_results_men(this, ResultsList);
+		adapter_noGame=new LazyAdapter_noGame(this, ResultsList);
 		
 		new LoadResults().execute();
 		

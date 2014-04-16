@@ -76,9 +76,14 @@ public class MainScreenActivity extends Activity {
 		
         
         //Layout
+        
+        //FONTS
 		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
-		TextView header = (TextView) findViewById(R.id.MainScreenHeader);
-		header.setTypeface(font);       
+		Typeface font_header = Typeface.createFromAsset(getAssets(), "franchise.ttf");
+        
+        //HEADER
+		Button header = (Button) findViewById(R.id.MainScreenHeader);
+		header.setTypeface(font_header);       
 	
 		//BUTTONS
 		Button btnNewsMainScreen = (Button) findViewById(R.id.btnNews);

@@ -23,18 +23,20 @@
   android:layout_width="match_parent"
   android:layout_height="wrap_content" >
   
-<RelativeLayout
+
+  
+<LinearLayout
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:orientation="vertical"
   android:background="#ffffff" >
   
 
-  
-  <ImageView android:id="@+id/pictureLarge_men"   
+    <ImageView android:id="@+id/pictureLarge_men"   
 	         android:layout_width="match_parent"
 	         android:layout_height="match_parent"
 	         android:src="@drawable/no_image"/>
+
   
   
   <TableLayout
@@ -42,8 +44,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/grey"
-      android:stretchColumns="0,1,2,3"
-      android:layout_below="@id/pictureLarge_men">
+      android:stretchColumns="0,1,2,3">
 
       <TableRow
           android:id="@+id/tableRow2"
@@ -70,7 +71,7 @@
               android:paddingTop="1dp"
               android:gravity="left"
               android:text="10"
-              android:textColor="#000000"
+              android:textColor="#ffffff"
               android:textSize="25sp" />
 
           <TextView 
@@ -91,7 +92,7 @@
               android:paddingTop="1dp"
               android:gravity="left"
               android:text="19"
-              android:textColor="#000000"
+              android:textColor="#ffffff"
               android:textSize="25sp" />
       </TableRow>
       
@@ -101,7 +102,6 @@
       android:id="@+id/birthday_table"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@id/GamesGoals_table"
       android:paddingLeft="30dp"
       android:paddingTop="15dp"  >
 
@@ -135,11 +135,10 @@
       android:id="@+id/position_table"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@id/birthday_table"
       android:paddingLeft="30dp" >
 
       <TableRow
-          android:id="@+id/tableRow1"
+          android:id="@+id/tableRow3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" >
   
@@ -171,7 +170,6 @@
       android:id="@+id/info_table"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@id/position_table"
       android:paddingLeft="30dp"
       android:paddingBottom="20dp" >
       
@@ -264,8 +262,6 @@
       </TableRow>
 
   </TableLayout>
-  
-  
-      </RelativeLayout>
+      </LinearLayout>
   </ScrollView> 
 </LinearLayout>

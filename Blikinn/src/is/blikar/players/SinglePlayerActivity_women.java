@@ -78,10 +78,10 @@ public class SinglePlayerActivity_women extends Activity {
         lblTotalGames_women.setText(varTotalGames_women);
         lblTotalGoals_women.setText(varTotalGoals_women);
         lblLeagueGames_women.setText(varLeagueGames_women);
-        lblLeagueGoals_women.setText(varLeagueGoals_women);
+        lblLeagueGoals_women.setText(" ("+varLeagueGoals_women+")");
         lblCupGames_women.setText(varCupGames_women);
-        lblCupGoals_women.setText(varCupGoals_women);
+        lblCupGoals_women.setText(" ("+varCupGoals_women+")");
         lblEuropeGames_women.setText(varEuropeGames_women);
-        lblEuropeGoals_women.setText(varEuropeGoals_women);
+        lblEuropeGoals_women.setText(" ("+varEuropeGoals_women+")");
     }
 }

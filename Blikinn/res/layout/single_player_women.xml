@@ -4,137 +4,51 @@
   android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="#ffffff">
+  android:background="#ffffff" >
   
-  <TextView
-      android:id="@+id/name_label_women"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:textSize="25sp"
-      android:textStyle="bold"
-      android:paddingTop="10dp"
-      android:paddingBottom="10dp"
-      android:paddingLeft="10dp"
-      android:paddingRight="10dp"
-      android:background="#27ae60"
-      android:textColor="#ffffff"
-      android:text="Placeholder Placeholderdottir" />    
+      <TextView android:id="@+id/name_label_women"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#27ae60"
+            android:textColor="#ffffff"/>
   
- <ScrollView
+<ScrollView
   android:id="@+id/scrollViewNews"
   android:layout_width="match_parent"
   android:layout_height="wrap_content" >
   
-<LinearLayout
+<RelativeLayout
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:orientation="vertical" >
-    
+  android:orientation="vertical"
+  android:background="#ffffff" >
+  
 
+  
   <ImageView android:id="@+id/pictureLarge_women"   
 	         android:layout_width="match_parent"
 	         android:layout_height="match_parent"
 	         android:src="@drawable/no_image"/>
-
-
-
+  
+  
   <TableLayout
+      android:id="@+id/GamesGoals_table"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content" >
-
-      <TableRow
-          android:id="@+id/tableRow1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" >
-          
-        <TextView
-      android:id="@+id/birthday_text"
-      android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:paddingLeft="10dp"
-      android:paddingTop="10dp"
-      android:text="Fædd: "
-      android:textColor="#000000"
-      android:textSize="15sp"
-      android:textStyle="bold" />
-
-  <TextView
-      android:id="@+id/birthday_label_women"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:text="Placeholder"
-      android:textColor="#000000"
-      android:textSize="15sp" />
-          
-      </TableRow>
+      android:background="@color/grey"
+      android:stretchColumns="0,1,2,3"
+      android:layout_below="@id/pictureLarge_women">
 
       <TableRow
           android:id="@+id/tableRow2"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content" >
-          
-            <TextView
-              android:id="@+id/Leikir_text"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Leikir: "
-              android:textColor="#000000"
-              android:textSize="30sp"
-              android:textStyle="bold" />
-          
-
-            <TextView
-              android:id="@+id/totalGames_label_women"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="1dp"
-              android:text="Placeholder"
-              android:textColor="#000000"
-              android:textSize="30sp" />
-            
-            <TextView
-              android:id="@+id/Mork_text"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="15dp"
-              android:paddingTop="3dp"
-              android:text="Mörk: "
-              android:textColor="#000000"
-              android:textSize="30sp"
-              android:textStyle="bold" /> 
-            
-
-           <TextView
-              android:id="@+id/totalGoals_label_women"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="1dp"
-              android:text="Placeholder"
-              android:textColor="#000000"
-              android:textSize="30sp" />
-      </TableRow>
-
-      
-
-      <TableRow
-          android:id="@+id/tableRow3"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" >
-           
-           <TextView
-              android:id="@+id/tournament_text"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Mót"
-              android:textColor="#000000"
-              android:textSize="15sp"
-              android:textStyle="bold" />
+          android:layout_height="wrap_content">
 
           <TextView
               android:id="@+id/games_text"
@@ -142,135 +56,181 @@
               android:layout_height="wrap_content"
               android:paddingLeft="10dp"
               android:paddingTop="3dp"
-              android:text="Leikir"
+              android:text="Leikir: "
+              android:gravity="right"
+              android:textColor="#000000"
+              android:textSize="25sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/totalGames_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="1dp"
+              android:gravity="left"
+              android:text="10"
+              android:textColor="#000000"
+              android:textSize="25sp" />
+
+          <TextView 
+              android:id="@+id/goals_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Mörk: "
+              android:gravity="right"
+              android:textColor="#000000"
+              android:textSize="25sp" 
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/totalGoals_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingTop="1dp"
+              android:gravity="left"
+              android:text="19"
+              android:textColor="#000000"
+              android:textSize="25sp" />
+      </TableRow>
+      
+        </TableLayout>
+  
+  <TableLayout
+      android:id="@+id/birthday_table"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/GamesGoals_table"
+      android:paddingLeft="30dp"
+      android:paddingTop="15dp"  >
+
+      <TableRow
+          android:id="@+id/tableRow1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+  
+  
+   <TextView
+              android:id="@+id/birthday_text"
+              android:layout_width="120dp"
+              android:layout_height="wrap_content"
+              android:text="Fædd: "
               android:textColor="#000000"
               android:textSize="15sp"
               android:textStyle="bold" />
 
           <TextView
-              android:id="@+id/goals_text"
+              android:id="@+id/birthday_label_women"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Mörk"
-              android:textColor="#000000"
-              android:textSize="15sp"
-              android:textStyle="bold" />
+              android:text="Placeholder"
+              android:textColor="#000000" />
+          
+          </TableRow>
+  </TableLayout>
+  
 
-      </TableRow>
+
+ <TableLayout
+      android:id="@+id/info_table"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/birthday_table"
+      android:paddingLeft="30dp"
+      android:paddingBottom="20dp" >
+      
 
       <TableRow
           android:id="@+id/tableRow4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" >
-      
-            <TextView
+          
+           <TextView
               android:id="@+id/league_text"
-              android:layout_width="fill_parent"
+              android:layout_width="120dp"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Deildin"
+              android:text="Deildarleikir: "
               android:textColor="#000000"
               android:textSize="15sp"
               android:textStyle="bold" />
-          
 
-           <TextView
+          <TextView
               android:id="@+id/leagueGames_label_women"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:textColor="#000000"
-               />
+              android:text = "13"
+              android:textColor="#000000"/>
 
-      <TextView android:id="@+id/leagueGoals_label_women"
-          android:layout_width="fill_parent" 
-          android:layout_height="wrap_content"
-          android:paddingLeft="10dp"
-          android:paddingTop="3dp"
-          android:textColor="#000000" 
-           />
-
-      </TableRow>
-      
-            <TableRow
-          android:id="@+id/tableRow5"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" >
-          
-           <TextView
-              android:id="@+id/cup_text"
+          <TextView
+              android:id="@+id/leagueGoals_label_women"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Bikar"
+              android:text= "4"
+              android:textColor="#000000" />
+      </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+          
+            <TextView
+              android:id="@+id/cup_text"
+              android:layout_width="120dp"
+              android:layout_height="wrap_content"
+              android:text="Bikarleikir: "
               android:textColor="#000000"
               android:textSize="15sp"
               android:textStyle="bold" />
 
-          <TextView
-              android:id="@+id/cupGames_label_women"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:textColor="#000000"
-               />
+                <TextView
+                    android:id="@+id/cupGames_label_women"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "42"
+                    android:textColor="#000000" />
 
-          <TextView
-              android:id="@+id/cupGoals_label_women"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:textColor="#000000"
-               />
+                <TextView
+                    android:id="@+id/cupGoals_label_women"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "4"
+                    android:textColor="#000000"/>
+            </TableRow>
 
-      </TableRow>
-      
       <TableRow
           android:id="@+id/tableRow6"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" >
-          
+                
            <TextView
               android:id="@+id/europe_text"
-              android:layout_width="fill_parent"
+              android:layout_width="120dp"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:text="Evrópa"
+              android:text="Evrópuleikir: "
               android:textColor="#000000"
               android:textSize="15sp"
-              android:textStyle="bold" />      
-
-          <TextView
-              android:id="@+id/europeGoals_label_women"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:textColor="#000000"
-               />
+              android:textStyle="bold" />  
 
           <TextView
               android:id="@+id/europeGames_label_women"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:paddingLeft="10dp"
-              android:paddingTop="3dp"
-              android:textColor="#000000"
-               />
+              android:text= "24"
+              android:textColor="#000000"/>
 
+          <TextView
+              android:id="@+id/europeGoals_label_women"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text= "6"
+              android:textColor="#000000"/>
       </TableRow>
-      
-      
+
   </TableLayout>
   
-    </LinearLayout>
+  
+      </RelativeLayout>
   </ScrollView> 
 </LinearLayout>

@@ -82,10 +82,10 @@ public class SinglePlayerActivity_men extends Activity {
         lblTotalGames_men.setText(varTotalGames_men);
         lblTotalGoals_men.setText(varTotalGoals_men);
         lblLeagueGames_men.setText(varLeagueGames_men);
-        lblLeagueGoals_men.setText(varLeagueGoals_men);
+        lblLeagueGoals_men.setText(" ("+varLeagueGoals_men+")");
         lblCupGames_men.setText(varCupGames_men);
-        lblCupGoals_men.setText(varCupGoals_men);
+        lblCupGoals_men.setText(" ("+varCupGoals_men+")");
         lblEuropeGames_men.setText(varEuropeGames_men);
-        lblEuropeGoals_men.setText(varEuropeGoals_men);
+        lblEuropeGoals_men.setText(" ("+varEuropeGoals_men+")");
     }
 }

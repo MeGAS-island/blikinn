@@ -30,13 +30,13 @@ public class TrophiesActivity extends TabActivity {
         Intent intentMen = new Intent().setClass(this, TrophiesMenScreenActivity.class);
         TabSpec tabSpecMen = tabHost
           .newTabSpec(MEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.icon_men))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_male))
           .setContent(intentMen);
         // Women tab
         Intent intentWomen = new Intent().setClass(this, TrophiesWomenScreenActivity.class);
         TabSpec tabSpecWomen = tabHost
           .newTabSpec(WOMEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.icon_women))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_female))
           .setContent(intentWomen);
         // add all tabs 
         tabHost.addTab(tabSpecMen);

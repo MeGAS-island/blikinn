@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Blikinn</string>
-    <string name="app_name_main_screen">blikinn</string>
+    <string name="app_name_main_screen">BLIKINN</string>
     <string name="action_settings">Settings</string>
     <string name="btnNewsMainScreenText">Fréttir</string>
     <string name="btnGamesResultsMainScreenText">Leikir og úrslit</string>

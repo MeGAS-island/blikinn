@@ -1,0 +1,242 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+<TextView
+    android:id="@+id/ResultsWomenHeader"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_x="0dp"
+    android:layout_y="0dp"
+    android:background="#27ae60"
+    android:gravity="center"
+    android:text="Úrslit leikja - konur"
+    android:textColor="#FFFFFF"
+    android:textSize="25sp"
+    android:textStyle="bold" />
+
+<Button
+    android:id="@+id/btntoggle"
+    android:layout_width="60dp"
+    android:layout_height="50dp"
+    android:layout_x="0dp"
+    android:layout_y="0dp"
+    android:background="#27ae60"
+    android:drawableLeft="@drawable/ic_slider"
+    android:textColor="#FFFFFF" />
+    
+<is.blikar.utils.SlideHolder
+    android:id="@+id/slideHolder"
+    android:layout_width="fill_parent"
+    android:layout_height="518dp"
+    android:layout_x="0dp"
+    android:layout_y="50dp"
+    android:background="#FFFFFF" >
+         
+    <ScrollView
+        android:layout_width="150dp"
+        android:layout_height="fill_parent"
+        android:background="#27ae60" >
+        
+
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+		<TextView
+       		 	android:id="@+id/textViewLine10"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />         
+
+            <Button
+                android:id="@+id/btnLiveGames"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/live_games"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background_slider"
+                android:gravity="left"  />  
+                 
+             <TextView
+       		 	android:id="@+id/textViewLine3"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />  
+        		           
+            <TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/men"
+                android:paddingLeft="5dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="1dp"
+                android:textSize="12sp"
+                android:textColor="@color/red"
+                android:textStyle="bold"/>
+            
+            <TextView
+       		 	android:id="@+id/textViewLine1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" /> 
+        		
+            <Button
+                android:id="@+id/btnLeagueTableMen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/league_table"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background_slider"
+                android:gravity="left" />
+            
+            <TextView
+       		 	android:id="@+id/textViewLine2"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />  
+
+            <Button
+                android:id="@+id/btnResultsMen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/results"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF" 
+                android:background="@drawable/button_background_slider"
+                android:gravity="left"/>
+            
+            <TextView
+       		 	android:id="@+id/textViewLine4"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />
+             
+            <Button
+                android:id="@+id/btnNextGamesMen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fixtures"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF" 
+                android:background="@drawable/button_background_slider"
+                android:gravity="left" />
+            
+            <TextView
+       		 	android:id="@+id/textViewLine5"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />
+                         
+            <TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/women"
+                android:paddingLeft="5dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="1dp"
+                android:textSize="12sp"
+                android:textColor="@color/red"
+                android:textStyle="bold"/>
+            
+            <TextView
+       		 	android:id="@+id/textViewLine6"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />
+             
+            <Button
+                android:id="@+id/btnLeagueTableWomen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/league_table"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF"  
+                android:background="@drawable/button_background_slider"
+                android:gravity="left"/>
+
+            <TextView
+       		 	android:id="@+id/textViewLine7"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" />             
+            
+            <Button
+                android:id="@+id/btnResultsWomen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/results"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF"  
+                android:background="@drawable/button_background_slider"
+                android:gravity="left"/>
+            
+            <TextView
+       		 	android:id="@+id/textViewLine8"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" /> 
+        		
+            <Button
+                android:id="@+id/btnNextGamesWomen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fixtures"
+                android:textSize="15sp"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFFFFF" 
+                android:background="@drawable/button_background_slider" 
+                android:gravity="left"/>
+            
+			<TextView
+       		 	android:id="@+id/textViewLine9"
+        		android:layout_width="fill_parent"
+        		android:layout_height="1px"
+        		android:background="#008000" /> 
+            
+        </LinearLayout>
+    </ScrollView>
+    
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="476dp"
+        android:divider="#ffffff"
+        android:dividerHeight="1px" />
+
+    <LinearLayout
+        android:id="@+id/slideScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    
+</is.blikar.utils.SlideHolder>
+
+</AbsoluteLayout>

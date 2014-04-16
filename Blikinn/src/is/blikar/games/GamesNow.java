@@ -39,7 +39,7 @@ public class GamesNow extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.games_main);
+		setContentView(R.layout.games_main_live);
 		
 		list=(ListView)findViewById(R.id.list);
 		LiveGamesList = new ArrayList<HashMap<String, String>>();
@@ -70,7 +70,7 @@ public class GamesNow extends Activity {
 		
 		//Layout
 		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
-		TextView header = (TextView) findViewById(R.id.LeikirHeader);
+		TextView header = (TextView) findViewById(R.id.LiveHeader);
 		header.setTypeface(font);   
 		
 		

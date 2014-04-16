@@ -15,12 +15,14 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 /**
  * 
  * @author Snorri Hannesson
@@ -62,7 +64,7 @@ public class NextGamesMenActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.games_main);
+		setContentView(R.layout.games_main_nextmen);
 		
 		list=(ListView)findViewById(R.id.list);
 
@@ -91,6 +93,11 @@ public class NextGamesMenActivity extends Activity {
 				
 			}
 		});
+		
+		//Layout
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		TextView header = (TextView) findViewById(R.id.NextMenHeader);
+		header.setTypeface(font); 		
 		
 		Button btnResultsMen = (Button) findViewById(R.id.btnResultsMen);	
 		btnResultsMen.setOnClickListener(new View.OnClickListener() {

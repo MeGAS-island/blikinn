@@ -29,13 +29,13 @@ public class PlayersActivity extends TabActivity {
         Intent intentMen = new Intent().setClass(this, PlayersMenScreenActivity.class);
         TabSpec tabSpecMen = tabHost
           .newTabSpec(MEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.icon_men))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_male))
           .setContent(intentMen);
         // Women tab
         Intent intentWomen = new Intent().setClass(this, PlayersWomenScreenActivity.class);
         TabSpec tabSpecWomen = tabHost
           .newTabSpec(WOMEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.icon_women))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_female))
           .setContent(intentWomen); 
         tabHost.addTab(tabSpecMen);
         tabHost.addTab(tabSpecWomen);

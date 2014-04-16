@@ -33,14 +33,14 @@ public class NewsActivity extends TabActivity {
         Intent intentMen = new Intent().setClass(this, NewsScreenActivity.class);
         TabSpec tabSpecMen = tabHost
           .newTabSpec(MEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.ic_tv_color))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_male))
           .setContent(intentMen);
         
         // Men tab
         Intent intentWomen = new Intent().setClass(this, NewsWomanScreenActivity.class);
         TabSpec tabSpecWomen = tabHost
           .newTabSpec(WOMEN_SPEC)
-          .setIndicator("", ressources.getDrawable(R.drawable.ic_radio_color))
+          .setIndicator("", ressources.getDrawable(R.drawable.icon_female))
           .setContent(intentWomen);
     
         // Add all tabs 

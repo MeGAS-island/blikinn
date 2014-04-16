@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -56,7 +57,7 @@ public class PlayersMenScreenActivity extends Activity {
 		list=(ListView)findViewById(R.id.list);
 		playerList_men = new ArrayList<HashMap<String, String>>();
 		adapter=new LazyAdapter_men(this, playerList_men); 
-	    new LoadPlayersMen().execute();   
+	    new LoadPlayersMen().execute();	    
 	}
 	class LoadPlayersMen extends AsyncTask<String, String, String> {
 		@Override

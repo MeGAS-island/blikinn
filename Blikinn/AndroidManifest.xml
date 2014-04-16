@@ -112,7 +112,7 @@
         <activity android:name="is.blikar.pictures.ImagePagerActivity" />
 		
 		<activity
-        android:name="is.blikar.TV$TVListActivity"
+        android:name="is.blikar.TV.TVListActivity"
         android:configChanges="orientation|keyboardHidden|screenSize">
     	</activity>
     	

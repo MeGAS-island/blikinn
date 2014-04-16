@@ -11,6 +11,11 @@
     
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <supports-screens android:smallScreens="true"
+                  android:normalScreens="true"
+                  android:largeScreens="true"
+                  android:xlargeScreens="false" />
 
     <application
         android:name="is.blikar.pictures.UILApplication"
@@ -28,36 +33,88 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="is.blikar.blikinn.SplashScreenAd"></activity>
-        <activity android:name="is.blikar.blikinn.MainScreenActivity"></activity>
-        <activity android:name="is.blikar.blikinn.About"></activity>
-        <activity android:name="is.blikar.news.NewsScreenActivity"></activity>
-        <activity android:name="is.blikar.news.SingleNewsActivity"></activity>
-        <activity android:name="is.blikar.news.NewsWomanScreenActivity"></activity>
-        <activity android:name="is.blikar.news.SingleWomanNewsActivity"></activity>
-        <activity android:name="is.blikar.news.NewsActivity"></activity>
-        <activity android:name="is.blikar.games.ResultsMenActivity"></activity>
-        <activity android:name="is.blikar.games.NextGamesWomenActivity"></activity>
-        <activity android:name="is.blikar.games.NextGamesMenActivity"></activity>
-        <activity android:name="is.blikar.games.ResultsWomenActivity"></activity>
-        <activity android:name="is.blikar.games.LeagueMenActivity"></activity>
-        <activity android:name="is.blikar.games.LeagueWomenActivity"></activity>
-        <activity android:name="is.blikar.games.GamesNow"></activity>
-        <activity android:name="is.blikar.blikinn.PlayersMenScreenActivity"></activity>
-        <activity android:name="is.blikar.trophies.TrophiesMenScreenActivity"></activity>
-        <activity android:name="is.blikar.trophies.TrophiesWomenScreenActivity"></activity>
-        <activity android:name="is.blikar.trophies.TrophiesActivity"></activity>
-        <activity android:name="is.blikar.radio.RadioScreenActivity"></activity>
-        <activity android:name="is.blikar.players.SinglePlayerActivity_men" > </activity>
-		<activity android:name="is.blikar.players.SinglePlayerActivity_women" > </activity>
-		<activity android:name="is.blikar.players.PlayersWomenScreenActivity" > </activity>
-		<activity android:name="is.blikar.players.PlayersMenScreenActivity" > </activity>
-		<activity android:name="is.blikar.players.PlayersActivity" > </activity>
-		<activity android:name="is.blikar.pictures.ImageGridActivity" />
+        <activity android:name="is.blikar.blikinn.SplashScreenAd"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.blikinn.MainScreenActivity"
+           	      android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.blikinn.About"
+            	  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.news.NewsScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.news.SingleNewsActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.news.NewsWomanScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.news.SingleWomanNewsActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.news.NewsActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.ResultsMenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.NextGamesWomenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.NextGamesMenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.ResultsWomenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.LeagueMenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.LeagueWomenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.games.GamesNow"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.blikinn.PlayersMenScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.trophies.TrophiesMenScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.trophies.TrophiesWomenScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.trophies.TrophiesActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.radio.RadioScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="is.blikar.players.SinglePlayerActivity_men"
+				  android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="is.blikar.players.SinglePlayerActivity_women"
+				  android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="is.blikar.players.PlayersWomenScreenActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="is.blikar.players.PlayersMenScreenActivity"
+			      android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="is.blikar.players.PlayersActivity"
+				  android:screenOrientation="portrait">
+        </activity>
+		<activity android:name="is.blikar.pictures.ImageGridActivity"
+				  android:screenOrientation="portrait">
+        </activity>
         <activity android:name="is.blikar.pictures.ImagePagerActivity" />
 		
 		<activity
-        android:name="is.blikar.TV.TVListActivity"
+        android:name="is.blikar.TV$TVListActivity"
         android:configChanges="orientation|keyboardHidden|screenSize">
     	</activity>
     	

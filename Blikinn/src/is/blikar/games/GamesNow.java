@@ -34,7 +34,10 @@ public class GamesNow extends Activity {
 	
 	ArrayList<HashMap<String, String>> LiveGamesList;
 	LazyAdapter_LiveGames adapter;
+	LazyAdapter_noLiveGame adapter_noLiveGame;
 	ListView list;
+	
+	public boolean nogame = false;
 	
 	public final static String LEIKUR = "leikur";
 
@@ -46,6 +49,7 @@ public class GamesNow extends Activity {
 		list=(ListView)findViewById(R.id.list);
 		LiveGamesList = new ArrayList<HashMap<String, String>>();
 		adapter=new LazyAdapter_LiveGames(this, LiveGamesList);
+		adapter_noLiveGame=new LazyAdapter_noLiveGame(this, LiveGamesList);
 		
 		new PostAsync().execute();
 		
@@ -229,19 +233,24 @@ public class GamesNow extends Activity {
 						}
 					}
 				}
-			}	  
-			
-			pd.dismiss();
-			runOnUiThread(new Runnable() {
-				public void run() {			
-					list.setAdapter(adapter);
-				}
-			});
+			}
 			
 			String gamesresponse = builder.toString();
 			if(gamesresponse == "" || gamesresponse == null || leikir==0){
-				gamesresponse = "Enginn leikur í gangi";
+				nogame = true;
 			}
+			
+			pd.dismiss();
+			runOnUiThread(new Runnable() {
+				public void run() {	
+					if (nogame) {
+						list.setAdapter(adapter_noLiveGame);
+					} else {
+						list.setAdapter(adapter);
+					}
+				}
+			});
+			
 			
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put(LEIKUR, gamesresponse);

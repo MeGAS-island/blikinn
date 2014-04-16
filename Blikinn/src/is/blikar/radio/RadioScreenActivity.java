@@ -3,8 +3,10 @@ package is.blikar.radio;
 import is.blikar.blikinn.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.TextView;
 /**
  * 
  * @author Snorri Hannesson
@@ -21,5 +23,11 @@ public class RadioScreenActivity extends Activity {
 		webView = (WebView) findViewById(R.id.webView1);
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.loadUrl("http://www.spreaker.com/user/breidablik");
+		
+		//Layout
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		TextView header = (TextView) findViewById(R.id.radioHeader);
+		header.setTypeface(font);  
+		
 	}
 }

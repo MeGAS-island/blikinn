@@ -5,7 +5,10 @@ import java.io.File;
 import is.blikar.blikinn.R;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 /**
  * 
  * @author Aðalsteinn Stefánsson
@@ -18,6 +21,18 @@ public class TrophiesMenScreenActivity extends Activity {
 	   public void onCreate(Bundle savedInstanceState) {
 	       super.onCreate(savedInstanceState);
 	       setContentView(R.layout.trophies_men_screen);
+	       
+		   Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		   
+		   TextView tv_islandsmeistarar_karlar = (TextView) findViewById(R.id.tv_islandsmeistarar_karlar);
+		   tv_islandsmeistarar_karlar.setTypeface(font);
+		   
+		   TextView tv_bikarmeistarar_karlar = (TextView) findViewById(R.id.tv_bikarmeistarar_karlar);
+		   tv_bikarmeistarar_karlar.setTypeface(font);
+		   
+		   TextView biggest_victory_men = (TextView) findViewById(R.id.biggest_victory_men);
+		   biggest_victory_men.setTypeface(font);    
+		   
 	   }
 	   
 	   @Override

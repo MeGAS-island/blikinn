@@ -5,7 +5,9 @@ import java.io.File;
 import is.blikar.blikinn.R;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.TextView;
 
 /**
  * 
@@ -18,7 +20,19 @@ public class TrophiesWomenScreenActivity extends Activity {
 	   @Override
 	   public void onCreate(Bundle savedInstanceState) {
 	       super.onCreate(savedInstanceState);
-	       setContentView(R.layout.trophies_women_screen);     
+	       setContentView(R.layout.trophies_women_screen);    
+	       
+		   Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		   
+		   TextView tv_islandsmeistarar_kvenna = (TextView) findViewById(R.id.tv_islandsmeistarar_kvenna);
+		   tv_islandsmeistarar_kvenna.setTypeface(font);
+		   
+		   TextView tv_bikarmeistarar_kvenna = (TextView) findViewById(R.id.tv_bikarmeistarar_kvenna);
+		   tv_bikarmeistarar_kvenna.setTypeface(font);
+		   
+		   TextView biggest_victory_men = (TextView) findViewById(R.id.biggest_victory_women);
+		   biggest_victory_men.setTypeface(font);    
+	       
 	   }
 	   
 	   @Override

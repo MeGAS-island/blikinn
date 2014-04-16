@@ -151,6 +151,7 @@ public class GamesNow extends Activity {
 		@Override
 		protected void onPostExecute(Void result) {
 			int meet=0;
+			int leikir=0;
 			StringBuilder builder = new StringBuilder();
 			for (MotValue mot: helper.mots){
 				if(mot.getGrein().equals("Knattspyrna")){
@@ -179,6 +180,7 @@ public class GamesNow extends Activity {
 									builder.append("Nýjasta mark " + game.getUtilid() + " var skorað af " + game.getNyjastaMarkUti() + "\n");
 								}
 								game.setDone(true);	
+								leikir++;
 						}
 					}
 				}
@@ -192,7 +194,7 @@ public class GamesNow extends Activity {
 			});
 			
 			String gamesresponse = builder.toString();
-			if(gamesresponse == "" || gamesresponse == null){
+			if(gamesresponse == "" || gamesresponse == null || leikir==0){
 				gamesresponse = "Enginn leikur í gangi";
 			}
 			

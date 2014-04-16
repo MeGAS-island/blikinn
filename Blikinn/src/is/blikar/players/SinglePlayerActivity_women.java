@@ -2,6 +2,7 @@ package is.blikar.players;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +45,11 @@ public class SinglePlayerActivity_women extends Activity {
 		.considerExifParams(true)
 		.displayer(new FadeInBitmapDisplayer(20))
 		.build();
+
+		//Layout
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		TextView header = (TextView) findViewById(R.id.name_label_women);
+		header.setTypeface(font);          
 
         Intent in = getIntent();
         ImageLoader imageLoader = ImageLoader.getInstance();

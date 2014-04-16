@@ -26,16 +26,14 @@
         android:screenOrientation="portrait" >
         
         <activity
-            android:name="is.blikar.blikinn.SplashScreenLogo" >
+            android:name="is.blikar.blikinn.SplashScreenAd" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
  
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="is.blikar.blikinn.SplashScreenAd"
-            	  android:screenOrientation="portrait">
-        </activity>
+
         <activity android:name="is.blikar.blikinn.MainScreenActivity"
            	      android:screenOrientation="portrait">
         </activity>

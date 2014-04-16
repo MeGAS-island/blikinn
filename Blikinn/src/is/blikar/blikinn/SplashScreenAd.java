@@ -20,7 +20,7 @@ public class SplashScreenAd extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-      	String[] AdScreens = {"splash_ad_screen", "splash_ad_screen_2"};
+      	String[] AdScreens = {"splash_ad_screen"};
     	String RandomAdScreen = (AdScreens[new Random().nextInt(AdScreens.length)]);
     	int layoutId = getResources().getIdentifier("layout/" + RandomAdScreen, "layout", getPackageName());
         setContentView(layoutId);

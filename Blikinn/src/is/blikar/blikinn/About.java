@@ -4,8 +4,11 @@ import java.io.File;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.TextView;
 /** 
  * 
  * @author Guðný Lára Guðmundsdóttir 
@@ -26,6 +29,18 @@ public class About extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about_screen);
+		
+		
+		//FONT
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		
+        //TEXT
+		TextView header = (TextView) findViewById(R.id.aboutHeader);
+		header.setTypeface(font);
+		
+		TextView about_text = (TextView) findViewById(R.id.about_text);
+		about_text.setTypeface(font);    		
+		
 	}
 	
 	   @Override

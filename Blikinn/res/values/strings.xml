@@ -16,18 +16,19 @@
     <string name="btnMenTrophiesMenScreenText">Karlar</string>
     <string name="btnWomenTrophiesMenScreenText">Konur</string>
     <string name="about">Um Blikann</string>
-    <string name="aboutText">Appið blikinn var forritað af MeGAS sem verkefni í Hugbúnaðarverkefni 1 haustið 2013 í Háskóla Íslands. 
-        \nAppið var gert í samstarfi við Breiðablik. 
+    <string name="aboutText">Appið Blikinn var unnið af nemendum við Verkfræði- og náttúruvísindadeild Háskóla Íslands haustið 2013. Blikinn var unninn í samstarfi við Knattspyrnudeild Breiðabliks og www.blikar.is
         \n
-        \nMeGAS:
+        \nNemendur:
         \nAðalsteinn Stefánsson
         \nGuðný Lára Guðmundsdóttir
         \nMargrét Sigurpálsdóttir
         \nSnorri Hannesson
         \n
         \nÞakkir:
+        \nGylfi Steinn Gunnarsson
         \nJónas Óli Jónasson
 		\nRagnar Miguel Herreros
+		\nStjórn Knattspyrnudeildar Breiðabliks
 		</string>
 
 	<string name="TrophiesIcelandMenText">

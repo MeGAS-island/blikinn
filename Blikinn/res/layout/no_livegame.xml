@@ -8,7 +8,7 @@
         	android:id="@+id/enginnleikur"
         	android:layout_width="match_parent"
         	android:layout_height="150dp"
-        	android:text="Enginn leikur í gangi"
+        	android:text="Enginn Breiðabliksleikur í gangi"
         	android:gravity="center"
         	android:textSize="20dp"
         	android:textColor="@color/grey" />  

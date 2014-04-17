@@ -111,7 +111,7 @@ public class PlayersMenScreenActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(PlayersMenScreenActivity.this);
-			pDialog.setMessage("Sæki leikmenn...");
+			pDialog.setMessage("Sæki leikmenn");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();

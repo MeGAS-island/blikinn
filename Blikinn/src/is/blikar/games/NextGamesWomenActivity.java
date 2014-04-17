@@ -207,7 +207,7 @@ public class NextGamesWomenActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(NextGamesWomenActivity.this);
-			pDialog.setMessage("Sæki leiki...");
+			pDialog.setMessage("Sæki leiki");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();

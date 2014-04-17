@@ -108,7 +108,7 @@ public class PlayersWomenScreenActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(PlayersWomenScreenActivity.this);
-			pDialog.setMessage("Sæki leikmenn...");
+			pDialog.setMessage("Sæki leikmenn");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();

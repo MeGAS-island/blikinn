@@ -214,7 +214,7 @@ public class ResultsMenActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			pDialog = new ProgressDialog(ResultsMenActivity.this);
-			pDialog.setMessage("Sæki leiki...");
+			pDialog.setMessage("Sæki úrslit");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
 			pDialog.show();

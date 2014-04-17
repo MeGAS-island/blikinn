@@ -186,7 +186,7 @@ public class GamesNow extends Activity {
 		@Override
 		protected void onPreExecute() {
 			pd = new ProgressDialog(GamesNow.this);
-			pd.setMessage("Sæki leiki í gangi...");
+			pd.setMessage("Sæki leiki í gangi");
 			pd.setIndeterminate(false);
 			pd.setCancelable(false);
 			pd.show();

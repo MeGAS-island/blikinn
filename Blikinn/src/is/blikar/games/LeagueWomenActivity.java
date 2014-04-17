@@ -188,7 +188,7 @@ public class LeagueWomenActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			pd = new ProgressDialog(LeagueWomenActivity.this);
-			pd.setMessage("Sæki deildarstöðu kvenna...");
+			pd.setMessage("Sæki deildarstöðu kvenna");
 			pd.setIndeterminate(false);
 			pd.setCancelable(false);
 			pd.show();

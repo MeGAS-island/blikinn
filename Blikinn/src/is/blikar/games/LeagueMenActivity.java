@@ -187,7 +187,7 @@ public class LeagueMenActivity extends Activity {
 		@Override
 		protected void onPreExecute() {
 			pd = new ProgressDialog(LeagueMenActivity.this);
-			pd.setMessage("Sæki deildarstöðu karla...");
+			pd.setMessage("Sæki deildarstöðu karla");
 			pd.setIndeterminate(false);
 			pd.setCancelable(false);
 			pd.show();

@@ -65,7 +65,7 @@ public class MainScreenActivity extends Activity {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
             alertDialogBuilder.setTitle("Engin nettenging");
             alertDialogBuilder
-                   .setMessage("Þú ert ekki tengdur netinu. Vinsamlegast kveiktu á netinu til að nota appið.")
+                   .setMessage("Þú ert ekki tengdur netinu. Vinsamlegast athugaðu netstillingar.")
                    .setCancelable(false)
             	   .setPositiveButton(ok, new OnClickListener() {
             		   public void onClick(DialogInterface dialog, int id) { }

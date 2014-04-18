@@ -38,7 +38,6 @@
         android:layout_width="150dp"
         android:layout_height="fill_parent"
         android:background="#27ae60" >
-        
 
 
         <LinearLayout

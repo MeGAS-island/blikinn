@@ -34,13 +34,6 @@
     android:layout_y="50dp"
     android:background="#FFFFFF" >
          
-    <ScrollView
-        android:layout_width="150dp"
-        android:layout_height="fill_parent"
-        android:background="#27ae60" >
-        
-
-
         <LinearLayout
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -50,35 +43,35 @@
        		 	android:id="@+id/textViewLine10"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />         
+        		android:background="@color/dark_grey" />         
 
             <Button
                 android:id="@+id/btnLiveGames"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/live_games"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left"  />  
-                 
+                android:gravity="left|center_vertical"  />  
+            
              <TextView
        		 	android:id="@+id/textViewLine3"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />  
+        		android:background="@color/dark_grey" />  
         		           
             <TextView 
+                android:id="@+id/games_men_header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/men"
-                android:paddingLeft="5dp"
-                android:paddingTop="18dp"
-                android:paddingBottom="1dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
                 android:textSize="12sp"
+                android:background="@color/light_grey_2"
                 android:textColor="@color/red"
                 android:textStyle="bold"/>
             
@@ -86,73 +79,69 @@
        		 	android:id="@+id/textViewLine1"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" /> 
+        		android:background="@color/dark_grey" /> 
         		
             <Button
                 android:id="@+id/btnLeagueTableMen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/league_table"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left" />
+                android:gravity="left|center_vertical"  />  
             
             <TextView
        		 	android:id="@+id/textViewLine2"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />  
+        		android:background="@color/dark_grey" />  
 
             <Button
                 android:id="@+id/btnResultsMen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/results"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF" 
+                android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left"/>
+                android:gravity="left|center_vertical"  />  
             
             <TextView
        		 	android:id="@+id/textViewLine4"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />
+        		android:background="@color/dark_grey" />
              
             <Button
                 android:id="@+id/btnNextGamesMen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fixtures"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF" 
+                android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left" />
+                android:gravity="left|center_vertical"  />  
             
             <TextView
        		 	android:id="@+id/textViewLine5"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />
+        		android:background="@color/dark_grey" />
                          
             <TextView 
+                android:id="@+id/games_women_header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/women"
-                android:paddingLeft="5dp"
-                android:paddingTop="18dp"
-                android:paddingBottom="1dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
                 android:textSize="12sp"
+                android:background="@color/light_grey_2"
                 android:textColor="@color/red"
                 android:textStyle="bold"/>
             
@@ -160,67 +149,66 @@
        		 	android:id="@+id/textViewLine6"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />
+        		android:background="@color/dark_grey" />
              
             <Button
                 android:id="@+id/btnLeagueTableWomen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/league_table"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF"  
+                android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left"/>
+                android:gravity="left|center_vertical"  />  
 
             <TextView
        		 	android:id="@+id/textViewLine7"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" />             
+        		android:background="@color/dark_grey" />             
             
             <Button
                 android:id="@+id/btnResultsWomen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/results"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF"  
+                android:textColor="#FFFFFF"
                 android:background="@drawable/button_background_slider"
-                android:gravity="left"/>
+                android:gravity="left|center_vertical"  />  
             
             <TextView
        		 	android:id="@+id/textViewLine8"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" /> 
+        		android:background="@color/dark_grey" /> 
         		
             <Button
                 android:id="@+id/btnNextGamesWomen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fixtures"
+                android:drawableLeft="@drawable/ic_clock"
                 android:textSize="15sp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF" 
-                android:background="@drawable/button_background_slider" 
-                android:gravity="left"/>
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_background_slider"
+                android:gravity="left|center_vertical"  />  
             
 			<TextView
        		 	android:id="@+id/textViewLine9"
         		android:layout_width="fill_parent"
         		android:layout_height="1px"
-        		android:background="#008000" /> 
+        		android:background="@color/dark_grey" /> 
+        		
+			<TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="400dp"
+                android:text=""
+                android:background="@color/light_grey_2"/>
             
         </LinearLayout>
-    </ScrollView>
     
     <ListView
         android:id="@+id/list"

@@ -223,8 +223,8 @@ public class GamesNow extends Activity {
 						meet=mot.getMeet();
 					}
 				for(LeikirValue game : helper.leikir) {
-					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("EkkiHafinn")){
-						if(game.getHeimalid().equals("Bröndby")||game.getUtilid().equals("Bröndby")){
+					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("ÍGangi")){
+						if(game.getHeimalid().equals("Breiðablik")||game.getUtilid().equals("Breiðablik")){
 							if(mot.getKyn().equals("Karlar")){
 								builder.append("\n "+mot.getMot()+" karla\n");
 								tournament.append(mot.getMot()+" karla");

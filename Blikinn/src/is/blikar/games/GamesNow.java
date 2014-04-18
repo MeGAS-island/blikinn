@@ -39,7 +39,13 @@ public class GamesNow extends Activity {
 	
 	public boolean nogame = false;
 	
-	public final static String LEIKUR = "leikur";
+	public final static String MOT = "mot";
+	public final static String HEIMALID = "heimalid";
+	public final static String HEIMASKOR = "heimaskor";
+	public final static String UTISKOR = "utiskor";
+	public final static String UTILID = "utilid";
+	public final static String NYTTMARK = "nyttmark";
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -202,36 +208,56 @@ public class GamesNow extends Activity {
 			int meet=0;
 			int leikir=0;
 			StringBuilder builder = new StringBuilder();
+			StringBuilder tournament = new StringBuilder();
+			StringBuilder homeTeam = new StringBuilder();
+			StringBuilder homeGoal = new StringBuilder();
+			StringBuilder awayGoal = new StringBuilder();
+			StringBuilder awayTeam = new StringBuilder();
+			StringBuilder newGoal = new StringBuilder();
 			for (MotValue mot: helper.mots){
 				if(mot.getGrein().equals("Knattspyrna")){
 					if(mot.getKyn().equals("Karlar")){
-						builder.append("\n "+mot.getMot()+" karla\n");
 						meet=mot.getMeet();
 					}
 					if(mot.getKyn().equals("Konur")){
-						builder.append("\n "+mot.getMot()+" kvenna\n");
 						meet=mot.getMeet();
 					}
-				}
 				for(LeikirValue game : helper.leikir) {
-					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("ÍGangi")){
-						if(game.getHeimalid().equals("Breiðablik")||game.getUtilid().equals("Breiðablik")){
-								builder.append("\n"+game.getHeimalid() + " ");
-								builder.append(game.getMarkHeima() + " - ");
-								builder.append(game.getMarkUti());
-								builder.append(" "+game.getUtilid());
-								builder.append("\n");
-								builder.append("\n");
-								if(game.getNyjastaMarkHeima()!=""  && game.getNyjastaMarkHeima()!=null){
-									builder.append("Nýjasta mark " + game.getHeimalid() + " var skorað af " + game.getNyjastaMarkHeima() + "\n");
-								}
-								if(game.getNyjastaMarkUti()!="" && game.getNyjastaMarkUti()!=""){
-									builder.append("Nýjasta mark " + game.getUtilid() + " var skorað af " + game.getNyjastaMarkUti() + "\n");
-								}
-								game.setDone(true);	
-								leikir++;
+					if(game.getMeet()==meet&&game.getDone()==false&&game.getStada().equals("EkkiHafinn")){
+						if(game.getHeimalid().equals("Bröndby")||game.getUtilid().equals("Bröndby")){
+							if(mot.getKyn().equals("Karlar")){
+								builder.append("\n "+mot.getMot()+" karla\n");
+								tournament.append(mot.getMot()+" karla");
+							}
+							if(mot.getKyn().equals("Konur")){
+								builder.append("\n "+mot.getMot()+" kvenna\n");
+								tournament.append(mot.getMot()+" karla");
+							}
+							builder.append("\n"+game.getHeimalid() + " ");
+							homeTeam.append(game.getHeimalid());
+							
+							builder.append(game.getMarkHeima() + " - ");
+							homeGoal.append(game.getMarkHeima());
+							
+							builder.append(game.getMarkUti());
+							awayGoal.append(game.getMarkUti());
+							
+							builder.append(" "+game.getUtilid());
+							awayTeam.append(game.getUtilid());
+							
+							if(game.getNyjastaMarkHeima()!=""  && game.getNyjastaMarkHeima()!=null){
+								builder.append("Nýjasta mark " + game.getHeimalid() + " var skorað af " + game.getNyjastaMarkHeima() + "\n");
+								newGoal.append("Nýjasta mark " + game.getHeimalid() + " var skorað af " + game.getNyjastaMarkHeima() + "\n");
+							}
+							if(game.getNyjastaMarkUti()!="" && game.getNyjastaMarkUti()!=""){
+								builder.append("Nýjasta mark " + game.getUtilid() + " var skorað af " + game.getNyjastaMarkUti() + "\n");
+								newGoal.append("Nýjasta mark " + game.getUtilid() + " var skorað af " + game.getNyjastaMarkUti() + "\n");
+							}
+							game.setDone(true);	
+							leikir++;
 						}
 					}
+				}
 				}
 			}
 			
@@ -251,9 +277,21 @@ public class GamesNow extends Activity {
 				}
 			});
 			
+			String mot = tournament.toString();
+			String heimalid = homeTeam.toString();
+			String heimaskor = homeGoal.toString();
+			String utiskor = awayGoal.toString();
+			String utilid = awayTeam.toString();
+			String nyttmark = newGoal.toString();
+			
 			
 			HashMap<String, String> map = new HashMap<String, String>();
-			map.put(LEIKUR, gamesresponse);
+			map.put(MOT, mot);
+			map.put(HEIMALID, heimalid);
+			map.put(HEIMASKOR, heimaskor);
+			map.put(UTISKOR, utiskor);
+			map.put(UTILID, utilid);
+			map.put(NYTTMARK, nyttmark);
 			LiveGamesList.add(map);
 		}
 	}

@@ -75,12 +75,7 @@ public class LeagueMenActivity extends Activity {
 				mSlideHolder.toggle();
 				
 			}
-		});
-		
-		//Layout
-		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
-		TextView header = (TextView) findViewById(R.id.LeagueMenHeader);
-		header.setTypeface(font); 		
+		});	
 		
 		Button btnResultsMen = (Button) findViewById(R.id.btnResultsMen);	
 		btnResultsMen.setOnClickListener(new View.OnClickListener() {
@@ -130,7 +125,33 @@ public class LeagueMenActivity extends Activity {
 				Intent LeagueWomen = new Intent(LeagueMenActivity.this, LeagueWomenActivity.class);
 						startActivity(LeagueWomen);
 					}
-				});	
+				});
+		
+		//Layout
+		Typeface font = Typeface.createFromAsset(getAssets(), "aller_rg.ttf");
+		TextView header = (TextView) findViewById(R.id.LeagueMenHeader);
+		header.setTypeface(font); 
+		
+		btnLiveGames.setTypeface(font);
+		
+		TextView karlar = (TextView) findViewById(R.id.games_men_header);
+		karlar.setTypeface(font);
+		
+		btnLeagueMen.setTypeface(font);
+		
+		btnResultsMen.setTypeface(font);
+		
+		btnNextGamesMen.setTypeface(font);
+		
+		TextView konur = (TextView) findViewById(R.id.games_women_header);
+		konur.setTypeface(font);
+		
+		btnLeagueWomen.setTypeface(font);
+		
+		btnResultsWomen.setTypeface(font);
+		
+		btnNextGamesWomen.setTypeface(font);
+		
 	}
 	
 	   @Override
